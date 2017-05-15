@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div class="welcome">
     <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
     <ul>
@@ -22,7 +22,7 @@
 
 <script>
 export default {
-  name: 'hello',
+  name: 'welcome',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
@@ -31,23 +31,17 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h1, h2 {
-  font-weight: normal;
-}
+<!-- 引入"scoped"属性后,改CSS只会作用到组件 -->
+<style lang="stylus" src="../../style/reset.styl">
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
-}
+<style lang="stylus" scoped>
+  html,body
+    font-size 14px
+    margin 0
+    padding 0
+    color #f45
+  *
+    color #49d
+</style>
+    
 </style>
