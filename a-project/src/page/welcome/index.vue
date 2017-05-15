@@ -32,16 +32,7 @@ export default {
 </script>
 
 <!-- 引入"scoped"属性后,改CSS只会作用到组件 -->
-<style lang="stylus" src="../../style/reset.styl">
-
 <style lang="stylus" scoped>
-  html,body
-    font-size 14px
-    margin 0
-    padding 0
-    color #f45
   *
     color #49d
-</style>
-    
 </style>

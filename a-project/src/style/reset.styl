@@ -1,3 +1,95 @@
+/*****
+ * 用途：(reset.styl)网页初始化默认样式
+ * 作者：Geek.Yu
+ * 联系方式：QQ { 1098654043 }
+ * 创建时间：2017-05-15 15:06
+ *****/
+@charset "utf-8"
+
+//-变量=======================
+
+//-基本文本色
+$basic_color = #313536
+
+//-样式=======================
+
+*
+    margin 0
+    padding 0
+html
+    *
+        outline none
+        -webkit-text-size-adjust none
+        -webkit-tap-highlight-color rgba(0,0,0,0)
+html,body,input
+    font-family Arial,Helvetica,sans-serif,"Hiragino Sans GB"
+    color $basic_color
+a   
+    text-decoration none
+a,button,input
+    outline none
+ol,ul,li
+    list-style none
 body
-   width 100%
-   background-color #d2d2d2
+    background $color_w1
+    color $color_black
+    line-height 1.5
+    font $fontSize_small $fontFamily
+
+//-一致的del样式
+del
+  text-decoration: line-through;
+
+//-去除默认边框
+fieldset,img
+  border 0
+
+//-对齐|浮动|清除浮动
+.clearfix
+    display table
+    &::before,
+    &::after
+        content ""
+        display table
+    &::after
+        clear both
+	.box__fl
+	    float left
+	.box__fr
+	    float right
+.top,.right,.bottom,.left
+    position absolute
+.top
+    top 0
+.right
+    right 0
+.bottom
+    bottom 0
+.left
+    left 0 
+
+//-禁止用户选中文字
+.ban__selected
+    user-select none
+
+//-只允许垂直方向的textarea的调整
+textarea
+    resize vertical
+
+//-DOM元素的显示与隐藏
+.dom__show
+    display block
+.dom__hide
+    display none
+
+
+//-指定盒模型
+.bs__border-box
+    box-sizing border-box
+    *
+        box-sizing @box-sizing
+.bs__content-box
+    box-sizing content-box
+    *
+        box-sizing @box-sizing
+

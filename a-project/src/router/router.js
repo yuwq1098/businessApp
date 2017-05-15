@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import welcome from '@/page/welcome'
-import login from '@/page/login'
+
+const welcome = r => require.ensure([], () => r(require('../page/welcome')), 'welcome')
+const login = r => require.ensure([], () => r(require('../page/login')), 'login')
 
 Vue.use(Router)
 

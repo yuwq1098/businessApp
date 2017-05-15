@@ -42,6 +42,10 @@ module.exports = {
         options: vueLoaderConfig
       },
       {
+        test: /\.styl$/,
+        loader: 'babel-loader!stylus-loader',
+      },
+      {
         test: /\.js$/,
         loader: 'babel-loader',
         include: [resolve('src'), resolve('test')]
