@@ -3,6 +3,7 @@ import Router from 'vue-router'
 
 const welcome = r => require.ensure([], () => r(require('../page/welcome')), 'welcome')
 const login = r => require.ensure([], () => r(require('../page/login')), 'login')
+import '../plugins/zepto.min.js'
 
 Vue.use(Router)
 

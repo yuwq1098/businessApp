@@ -21,6 +21,7 @@
 </template>
 
 <script>
+
 export default {
   name: 'welcome',
   data () {
@@ -31,7 +32,7 @@ export default {
 }
 </script>
 
-<!-- å¼•å…¥"scoped"å±žæ€§åŽ,æ”¹CSSåªä¼šä½œç”¨åˆ°ç»„ä»¶ -->
+<!-- ÒýÈë"scoped"ÊôÐÔºó,¸ÄCSSÖ»»á×÷ÓÃµ½×é¼þ -->
 <style lang="stylus" scoped>
   *
     color #49d
