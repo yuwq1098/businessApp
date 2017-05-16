@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import '../plugins/app.js'
+var app = require("../plugins/app.js");
 
 export default {
   name: "second",
