@@ -1,5 +1,0 @@
-build/*.js
-config/*.js
-src/router/*.js
-src/plugins/*.js
-src/main.js
