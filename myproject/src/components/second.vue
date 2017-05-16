@@ -41,3 +41,10 @@ export default {
   }
 }
 </script>
+
+<style lang="stylus">
+  body
+    background #85d
+  *
+    color #f86
+</style>

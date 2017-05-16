@@ -14,3 +14,8 @@ export default {
   }
 }
 </script>
+
+<style lang="stylus">
+  body
+    background #8df
+</style>

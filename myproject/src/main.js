@@ -1,20 +1,21 @@
-// vue¼ÓÔØÈë¿ÚÎÄ¼ş
+// vueåŠ è½½å…¥å£æ–‡ä»¶
 import Vue from 'vue'
 import App from './App'
-//ÍøÂçÇëÇóÄ£¿é vue-resource
+//ç½‘ç»œè¯·æ±‚æ¨¡å— vue-resource
 import VueResource from 'vue-resource'
-//Â·ÓÉ
+//è·¯ç”±
 import router from './router/router'
-//Fastclick(½â¾öÒÆ¶¯¶Ë300sÑÓ³ÙÊÂ¼ş)
+//Fastclick(è§£å†³ç§»åŠ¨ç«¯300så»¶è¿Ÿäº‹ä»¶)
 import Fastclick from './plugins/fastclick'
+import './plugins/flexible'
 
-//¿ªÆôdebugÄ£Ê½
+//å¼€å¯debugæ¨¡å¼
 Vue.config.debug = true;
 
-//ÔØÈëvue-resource
+//è½½å…¥vue-resource
 Vue.use(VueResource);
 
-// Â·ÓÉÆ÷»á´´½¨Ò»¸ö App ÊµÀı£¬²¢ÇÒ¹ÒÔØµ½Ñ¡Ôñ·û #app Æ¥ÅäµÄÔªËØÉÏ¡£
+// è·¯ç”±å™¨ä¼šåˆ›å»ºä¸€ä¸ª App å®ä¾‹ï¼Œå¹¶ä¸”æŒ‚è½½åˆ°é€‰æ‹©ç¬¦ #app åŒ¹é…çš„å…ƒç´ ä¸Šã€‚
 new Vue({
 	el: '#app',
 	router,
