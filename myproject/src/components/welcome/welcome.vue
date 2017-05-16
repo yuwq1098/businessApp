@@ -17,6 +17,6 @@ export default {
 </script>
 
 <!-- “scoped” 让css只作用当前组件 -->
-<style lang="stylus" rel="stylesheet/stylus" scoped>
+<style lang="stylus" rel="stylesheet/stylus">
   @import './welcome.styl';
 </style>
