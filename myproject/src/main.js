@@ -4,10 +4,10 @@ import App from './App'
 //网络请求模块 vue-resource
 import VueResource from 'vue-resource'
 //路由
-import router from './router/router'
+import router from './router'
 //Fastclick(解决移动端300s延迟事件)
-import Fastclick from './plugins/fastclick'
-import './plugins/flexible'
+import Fastclick from './common/vendor/fastclick'
+import flexible from './common/vendor/flexible'
 
 //开启debug模式
 Vue.config.debug = true;
@@ -20,6 +20,7 @@ new Vue({
 	el: '#app',
 	router,
 	Fastclick,
+	flexible,
 	template: '<App/>',
 	components: { App }
 })
