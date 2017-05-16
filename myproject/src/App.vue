@@ -9,5 +9,6 @@
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">
-  @import './common/css/reset';
+  @import './common/css/reset'
+  @import './common/css/app'
 </style>

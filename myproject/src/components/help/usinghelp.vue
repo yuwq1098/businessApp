@@ -1,12 +1,12 @@
 <template>
-  <div id="login" class="G-page">
-    <section>这是登录页面</section>
+  <div id="help" class="G-page">
+    <section>这是帮助页面</section>
   </div>
 </template>
 
 <script type="text/javascript">
 export default {
-  name: "login",
+  name: "help",
   data () {
     return {
       author: "Geek.Yu"
@@ -17,5 +17,5 @@ export default {
 
 <!-- “scoped” 让css只作用当前组件 -->
 <style lang="stylus" rel="stylesheet/stylus">
-  @import './login.styl';
+  @import './usinghelp.styl';
 </style>
