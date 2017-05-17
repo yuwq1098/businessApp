@@ -22,7 +22,7 @@ $c_gray03 = $c_gray + -(2 * 8)% + -(2 * .5)deg
 $c_gray04 = $c_gray + -(3 * 8)% + -(3 * .5)deg
 $c_gray05 = $c_gray + -(4 * 8)% + -(4 * .5)deg
 //绿色
-$c_green = #8AD121
+$c_green = #03BD00
 $c_green02 = $c_green + 1 * 8% + 1 * .5deg
 $c_green03 = $c_green + 2 * 8% + 2 * .5deg
 $c_green04 = $c_green + 3 * 8% + 3 * .5deg
@@ -124,8 +124,8 @@ _boder(direction,color=$c_white03,pixel=1px)
 //---严格盒模型
 _boxSizing(fn=1)
     if fn == 1
-        -webkit-box-sizing content-box
-        box-sizing content-box
+        -webkit-box-sizing border-box
+        box-sizing border-box
     else if fn == 2
         -webkit-box-sizing content-box
         box-sizing content-box
@@ -149,11 +149,10 @@ _completeCenter(left=0,right=0,top=0,bottom=0)
     margin auto
 
 //---图片大小控制(被容器填充)
-_imgwrap(node=imgwrap)
-    .{node}
-        img
-            width 100%
-            height 100%
+_imgwrap(x=100%,y=100%)
+    & img
+        width x
+        height y
 
 //---黑子溢出处理
 _overflow(method=hidden)
@@ -246,7 +245,7 @@ body
     _bgColor($c_white03)
     &.pure
         _bgColor($c_white)
-
+//页面
 .G-page
     width 10rem
     position relative
@@ -254,3 +253,21 @@ body
     _bgColor($c_white)
     &.transparent
         _bgColor(transparent)
+
+//按钮
+.G-btn
+    border none
+    _btnColor($c_green02,$c_white02,$c_green,$c_white02)
+    &.G-btn-primary
+        border none
+        _btnColor($c_green02,$c_white02,$c_green,$c_white02)
+    &.G-btn-hollow
+        border 1px solid $c_white05
+        _btnColor($c_white,$c_black02,$c_white02,$c_black02)
+
+//链接
+.G-link-txt
+    color $c_blue02
+    font-size $f_normal
+    &.actived,&:active
+        color $c_blue

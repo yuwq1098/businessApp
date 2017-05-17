@@ -7,14 +7,14 @@
       <div class="G-logo-txt">
         欢迎使用商机宝     
       </div><!-- 应用标语 -->
-      <button class="G-btn G-btn-primary">注册</button><!-- 注册 -->
-      <button class="G-btn G-btn-hollow">已有账号</button><!-- 登录 -->
+      <router-link to="/help" class="G-btn G-btn-primary">注册</router-link><!-- 注册 -->
+      <router-link to="/help" class="G-btn G-btn-hollow">已有账号</router-link><!-- 登录 -->
+    </section><!-- 登录框区域 -->
 
-      <div class="G-step-foot">
-        <a href="tel:18870836264" class="G-link-txt">联系客服</a>
-        <router-link to="/help" class="G-link-txt">使用帮助</router-link>
-      </div>
-    </section>
+    <section class="G-step-foot clearfix">
+      <a href="tel:18870836264" class="G-link-txt box__fl">联系客服</a>
+      <router-link to="/help" class="G-link-txt box__fr">使用帮助</router-link>
+    </section><!-- 底部链接区域 -->
   </div>
 </template>
 
@@ -30,10 +30,6 @@ export default {
 </script>
 
 <!-- “scoped” 让css只作用当前组件 -->
-<style lang="stylus" rel="stylesheet/stylus">
-  @import '../../common/css/app'
+<style lang="stylus" rel="stylesheet/stylus" scoped>
   @import './welcome.styl'
-  .G-btn-primary
-    background-color $c_orange04
-
 </style>
