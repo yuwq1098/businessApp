@@ -34,6 +34,6 @@ export default {
   @import '../../common/css/app'
   @import './welcome.styl'
   .G-btn-primary
-    background-color $color_be_c
+    background-color $c_orange04
 
 </style>

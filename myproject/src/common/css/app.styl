@@ -195,6 +195,20 @@ _gradient(bColor,eColor)
     background -moz-linear-gradient(bottom right, bColor, eColor)
     background linear-gradient(to bottom right, bColor, eColor)
 
+//---按钮颜色
+_btnColor(bgColor,txtColor,h_bgColor,h_txtColor)
+    background bgColor
+    color txtColor
+    &.actived,&:active
+        background h_bgColor
+        color h_txtColor
+
+//---盒子阴影颜色
+_boxShadow(range=10px,color=$c_black,x=0,y=0,ins=false)
+    if ins != true
+        box-shadow x y range color
+    else
+        box-shadow inset x y range color
 
 
 /* 颜色辅助类 */
@@ -225,6 +239,7 @@ _colorFn('white',$c_white,3,5)
     padding 0!important
 .nomargin
     margin 0!important
+
 
 //---网页样式主体
 body
