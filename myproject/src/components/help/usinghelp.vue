@@ -16,6 +16,9 @@ export default {
 </script>
 
 <!-- “scoped” 让css只作用当前组件 -->
-<style lang="stylus" rel="stylesheet/stylus">
+<style lang="stylus" rel="stylesheet/stylus" scoped>
   @import './usinghelp.styl';
+  
+  .G-page
+    height 100vh
 </style>

@@ -7,8 +7,8 @@
       <div class="G-logo-txt">
         欢迎使用商机宝     
       </div><!-- 应用标语 -->
-      <router-link to="/help" class="G-btn G-btn-primary">注册</router-link><!-- 注册 -->
-      <router-link to="/help" class="G-btn G-btn-hollow">已有账号</router-link><!-- 登录 -->
+      <router-link to="/register" class="G-btn G-btn-primary">注册</router-link><!-- 注册 -->
+      <router-link to="/login" class="G-btn G-btn-hollow">已有账号</router-link><!-- 登录 -->
     </section><!-- 登录框区域 -->
 
     <section class="G-step-foot clearfix">
