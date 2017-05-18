@@ -1,8 +1,8 @@
 <template>
   <div id="register" class="G-page">
     <section class="G-page-box">
-      <p>我是注册区域</p>
-    </section><!-- 登录框区域 -->
+      <p>我是注册步骤容器。。。</p>
+    </section><!-- 注册步骤容器 -->
 
     <section class="G-step-foot clearfix">
       <a :href="'tel:'+author.tel" class="G-link-txt box__fl">联系客服</a>

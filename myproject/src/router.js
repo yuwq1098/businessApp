@@ -16,6 +16,9 @@ const example__green = r => require.ensure([], () => r(require('./components/exa
 const welcome = r => require.ensure([], () => r(require('./components/welcome/welcome.vue')), 'welcome')
 const login = r => require.ensure([], () => r(require('./components/login/login.vue')), 'login')
 const register = r => require.ensure([], () => r(require('./components/register/register.vue')), 'register')
+const step1 = r => require.ensure([], () => r(require('./components/register/step1.vue')), 'step1')
+const step2 = r => require.ensure([], () => r(require('./components/register/step2.vue')), 'step2')
+const step3 = r => require.ensure([], () => r(require('./components/register/step3.vue')), 'step3')
 const help = r => require.ensure([], () => r(require('./components/help/usinghelp.vue')), 'help')
 
 
@@ -39,7 +42,19 @@ export default new Router({
 	    },
 	    {
 	        path: '/register',
-	        component: register
+	        redirect: '/step1'
+	    },
+	    {
+	        path: '/step1',
+	        component: step1
+	    },
+	    {
+	        path: '/step2',
+	        component: step2
+	    },
+	    {
+	        path: '/step3',
+	        component: step3
 	    },
 	    {
 	        path: '/help',

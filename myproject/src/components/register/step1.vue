@@ -1,5 +1,6 @@
 <template>
-    <div id="login" class="G-page">
+    <div class='step1'>
+        <v-my-register ref="register"></v-my-register>
         <section class="G-step-box">
             <div class="G-input-box">
                 <div class="G-row-tit">手机号</div>
@@ -21,28 +22,34 @@
             <div data-v-635149b8="" class="bind-user">注册新帐号</div>
             <router-link to="/login" class="G-btn G-btn-hollow">已有账号</router-link><!-- 登录 -->
             
-        </section><!-- 登录框区域 -->
-
-        <section class="G-step-foot clearfix">
-            <a :href="'tel:'+telephone" class="G-link-txt box__fl">联系客服</a>
-            <router-link to="/help" class="G-link-txt box__fr">使用帮助</router-link>
-        </section><!-- 底部链接区域 -->
+        </section><!-- 注册区域 -->
     </div>
+    
 </template>
 
-<script type="text/javascript">
-export default {
-  name: "login",
-  data () {
-    return {
-      author: "Geek.Yu",
-      telephone: 18870836264
+<script type="text/javascript"
+    import myRegister from 'register.vue'
+
+    export default {
+      name: "step1",
+      data () {
+        return {
+          author: {
+            tel: "18870836264",
+          },
+          data: {
+            logoUrl: "../../common/img/LOGO.png",
+            logoTit: "商机宝LOGO",
+          }
+        }
+      },
+      components:{
+          myRegister,
+      },
     }
-  }
-}
 </script>
 
 <!-- “scoped” 让css只作用当前组件 -->
 <style lang="stylus" rel="stylesheet/stylus" scoped>
-  @import './login.styl'
+  @import './register.styl'
 </style>

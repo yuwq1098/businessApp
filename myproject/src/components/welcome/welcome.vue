@@ -2,7 +2,7 @@
   <div id="welcome" class="G-page">
     <section class="G-page-box">
       <div class="G-logo">
-        <img src="../../common/img/LOGO.png" :alt="data.logoTit" />
+        <img :src="data.logoUrl" :alt="data.logoTit" />
       </div><!-- logo区域 -->
       <div class="G-logo-txt">
         欢迎使用商机宝     
@@ -27,7 +27,7 @@ export default {
         tel: 18870836264,
       },
       data: {
-        logoUrl: "../../common/img/LOGO.png",
+        logoUrl: "/static/img/LOGO.png",
         logoTit: "商机宝LOGO",
       }
     }
