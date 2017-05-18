@@ -3,9 +3,6 @@ import Vue from 'vue'
 import Router from "vue-router";
 
 // 定义组件
-const welcome = r => require.ensure([], () => r(require('./components/welcome/welcome.vue')), 'welcome')
-const login = r => require.ensure([], () => r(require('./components/login/login.vue')), 'login')
-const help = r => require.ensure([], () => r(require('./components/help/usinghelp.vue')), 'help')
 const example__color = r => require.ensure([], () => r(require('./components/example/color.vue')), 'color')
 const example__red = r => require.ensure([], () => r(require('./components/example/red.vue')), 'red')
 const example__blue = r => require.ensure([], () => r(require('./components/example/blue.vue')), 'blue')
@@ -14,6 +11,13 @@ const example__white = r => require.ensure([], () => r(require('./components/exa
 const example__gray = r => require.ensure([], () => r(require('./components/example/gray.vue')), 'gray')
 const example__orange = r => require.ensure([], () => r(require('./components/example/orange.vue')), 'orange')
 const example__green = r => require.ensure([], () => r(require('./components/example/green.vue')), 'green')
+
+
+const welcome = r => require.ensure([], () => r(require('./components/welcome/welcome.vue')), 'welcome')
+const login = r => require.ensure([], () => r(require('./components/login/login.vue')), 'login')
+const register = r => require.ensure([], () => r(require('./components/register/register.vue')), 'register')
+const help = r => require.ensure([], () => r(require('./components/help/usinghelp.vue')), 'help')
+
 
 // 启用路由
 Vue.use(Router)
@@ -34,9 +38,17 @@ export default new Router({
 	        component: login
 	    },
 	    {
+	        path: '/register',
+	        component: register
+	    },
+	    {
 	        path: '/help',
 	        component: help
 	    },
+
+
+
+
 	    {
 	        path: '/color',
 	        component: example__color

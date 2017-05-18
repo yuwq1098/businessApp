@@ -1,14 +1,7 @@
 <template>
-  <div id="welcome" class="G-page">
+  <div id="register" class="G-page">
     <section class="G-page-box">
-      <div class="G-logo">
-        <img src="../../common/img/LOGO.png" :alt="data.logoTit" />
-      </div><!-- logo区域 -->
-      <div class="G-logo-txt">
-        欢迎使用商机宝     
-      </div><!-- 应用标语 -->
-      <router-link to="/register" class="G-btn G-btn-primary">注册</router-link><!-- 注册 -->
-      <router-link to="/login" class="G-btn G-btn-hollow">已有账号</router-link><!-- 登录 -->
+      <p>我是注册区域</p>
     </section><!-- 登录框区域 -->
 
     <section class="G-step-foot clearfix">
@@ -20,7 +13,7 @@
 
 <script type="text/javascript">
 export default {
-  name: "welcome",
+  name: "register",
   data () {
     return {
       author: {
@@ -37,5 +30,5 @@ export default {
 
 <!-- “scoped” 让css只作用当前组件 -->
 <style lang="stylus" rel="stylesheet/stylus" scoped>
-  @import './welcome.styl'
+  @import './register.styl'
 </style>
