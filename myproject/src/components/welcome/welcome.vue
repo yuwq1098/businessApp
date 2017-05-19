@@ -27,7 +27,7 @@ export default {
         tel: 18870836264,
       },
       data: {
-        logoUrl: "/static/img/LOGO.png",
+        logoUrl: "static/img/LOGO.png",
         logoTit: "商机宝LOGO",
       }
     }

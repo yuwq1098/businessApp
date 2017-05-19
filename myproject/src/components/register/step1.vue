@@ -1,6 +1,6 @@
 <template>
     <div class='step1'>
-        <v-my-register ref="register"></v-my-register>
+        <my-register></my-register>
         <section class="G-step-box">
             <div class="G-input-box">
                 <div class="G-row-tit">手机号</div>
@@ -27,8 +27,8 @@
     
 </template>
 
-<script type="text/javascript"
-    import myRegister from 'register.vue'
+<script type="text/javascript">
+    import myRegister from './register.vue';
 
     export default {
       name: "step1",
@@ -38,7 +38,7 @@
             tel: "18870836264",
           },
           data: {
-            logoUrl: "../../common/img/LOGO.png",
+            logoUrl: "@/src/common/img/LOGO.png",
             logoTit: "商机宝LOGO",
           }
         }

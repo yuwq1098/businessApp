@@ -24,18 +24,21 @@ module.exports = {
       : config.dev.assetsPublicPath
   },
   resolve: {
-    extensions: ['.js', '.vue', '.json'],
-    alias: {
-      'vue$': 'vue/dist/vue.esm.js',
-      '@': resolve('src')
-    }
+      extensions: ['.css', '.js', '.vue'],
+      // fallback: [path.join(__dirname, '../node_modules')],
+      alias: {
+          'vue$': 'vue/dist/vue',
+          'src': path.resolve(__dirname, '../src'),
+          'common': path.resolve(__dirname, '../src/common'),
+          'components': path.resolve(__dirname, '../src/components')
+      }
   },
   module: {
     loaders: [
       {
         test: /\.((woff2?|svg)(\?v=[0-9]\.[0-9]\.[0-9]))|(woff2?|svg|jpe?g|png|gif|ico)$/,
         loaders: [
-            //Ğ¡ÓÚ10KBµÄÍ¼Æ¬»á×Ô¶¯×ª³ÉdataUrl£¬
+            //å°äº10KBçš„å›¾ç‰‡ä¼šè‡ªåŠ¨è½¬æˆdataUrlï¼Œ
             'url?limit=10000&name=img/[hash:8].[name].[ext]',
             'image?{bypassOnDebug:true, progressive:true,optimizationLevel:3,pngquant:{quality:"65-80",speed:4}}'
         ]
