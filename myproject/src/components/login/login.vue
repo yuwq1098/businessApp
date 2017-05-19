@@ -22,22 +22,18 @@
             
         </section><!-- 登录框区域 -->
 
-
-        <validator name="validatorMethod">
-
-            <div class="username">
-                <label for="">用户名：</label>
-                <input type="text" v-model="username" initial="off" v-validate:username="['username']" placeholder="请输入用户名">
-                <p class="red" v-if="$validatorMethod.username.username">由数字、26个英文字母或下划线和中文组成的字符串</p>
-            </div>
-            <div class="password">
-                <label for="">密码：</label>
-                <input type="password" v-model="password" initial="off" v-validate:password="['integer']"  placeholder="请输入密码">
-                <p class="red" v-if="$validatorMethod.password.integer">只能是数字</p>
-            </div>
-            <div><a @click="loginMethods" class="btn">登录</a></div>
-        </validator>
-
+        <div class="column is-12">
+            <label class="label" for="email">Email</label>
+            <p :class="{ 'control': true }">
+                <input v-validate="'required|email'" :class="{'input': true, 'is-danger': errors.has('email') }" name="email" type="text" placeholder="Email">
+                <span v-show="errors.has('email')" class="help is-danger">{{ errors.first('email') }}</span>
+            </p>
+            <label class="label" for="mobile">mobile</label>
+            <p :class="{ 'control': true }">
+                <input v-validate="'required|mobile'" :class="{'input': true, 'is-danger': errors.has('mobile') }" name="mobile" type="text" placeholder="mobile">
+                <span v-show="errors.has('mobile')" class="help is-danger">{{ errors.first('mobile') }}</span>
+            </p>
+        </div>
 
         <step-foot></step-foot><!-- 底部帮助链接 -->
     </div>
@@ -50,21 +46,35 @@
         name: "login",
         data () {
             return {
-                username: '',
-                password: '',
+                comment:"",
+                username: "",
+                password: "",
+                newpassword:"",
+                matchPassword:false,
+                $validatorMethod: {}
             }
         },
         mounted(){
             setTimeout(() => {
-
+                console.log("aaaa");
             }, 2000);
         },
         validators: {
+            noempty:function(val){
+                var reg = /^\s*$/g, isFlag = true;
+                if(val == "" || reg.test(val)){
+                    isFlag = false;
+                }
+                return  isFlag;
+            },
             username: function (val) {
                 return /^[A-Za-z0-9_\-\u4e00-\u9fa5]{1,10}$/.test(val);
             },
             integer: function (val) {
                 return /^[1-9]\d*$/.test(val);
+            },
+            match:function (val,result) {
+                return result;
             }
         },
         // 引入组件
@@ -77,6 +87,24 @@
             },
             passwok(){
                 //alert('验证码符合规范')
+            },
+            loginMethods:function () {
+                var self = this;
+                /**
+                 * 验证目标表单元素。
+                 * true:验证所有
+                 */
+                self.$validate(true,function () {
+                    /*如果所有条件都是false*/
+                    if(!self.$validatorMethod.invalid){
+                        alert("登录成功");
+                    }
+                })
+            }
+        },
+        computed:{
+            matchPassword:function () {
+                return this.password == this.newpassword
             }
         },
         watch: {

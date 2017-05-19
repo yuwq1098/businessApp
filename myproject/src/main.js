@@ -8,13 +8,34 @@ import router from './router'
 //Fastclick(解决移动端300s延迟事件)
 import Fastclick from './common/vendor/fastclick'
 import flexible from './common/vendor/flexible'
-import vuevalidator from './common/vendor/vue-validator'
+import VeeValidate from 'vee-validate';
+//修改语言包
+import zh_CN from 'vee-validate/dist/locale/zh_CN';
+//自定义规则
+import Validator from './common/js/customValidate';
 
+//VeeValidate语言包切换,放自定义提示前
+Validator.addLocale(zh_CN);
+
+//自定义提示
+const dictionary = {
+    zh_CN: {
+        messages: {
+            required: (field) => field + '不能为空'
+        }
+    }
+};
+Validator.updateDictionary(dictionary);
+
+//载入
+Vue.use(VeeValidate, {
+  locale: 'zh_CN',
+});
 
 //开启debug模式
 Vue.config.debug = true;
 //取消日志及警告
-Vue.config.silent = true
+Vue.config.silent = true;
 
 //载入vue-resource
 Vue.use(VueResource);
@@ -25,8 +46,6 @@ var vue = new Vue({
 	router,
 	Fastclick,
 	flexible,
-	vuevalidator,
 	template: '<App/>',
 	components: { App }
-}).$mount()
-document.getElementById('app').appendChild(vue.$el)
+}).$mount("#app")

@@ -8,29 +8,8 @@
     
 </template>
 <script>
-    require('./common/vendor/zepto.min.js');
-    require('./common/vendor/velocity/velocity.min.js');
     export default {
-    	data() {
-    		return {
-    			show: false,
-			    fadeInDuration: 1000,
-			    fadeOutDuration: 1000,
-			    maxFadeDuration: 1500,
-			    stop: false
-    		}
-    	},
-    	mounted() {
-            setTimeout(() => {
-                
-            }, 2000);
-        },
-        components: {
 
-        },
-        methods: {
-
-		}
     }
 </script>
 
