@@ -1,13 +1,8 @@
 <template>
-  <div id="register" class="G-page">
-    <section class="G-page-box">
+  <div id="register">
+    <section class="G-step-head">
       <p>我是注册步骤容器。。。</p>
     </section><!-- 注册步骤容器 -->
-
-    <section class="G-step-foot clearfix">
-      <a :href="'tel:'+author.tel" class="G-link-txt box__fl">联系客服</a>
-      <router-link to="/help" class="G-link-txt box__fr">使用帮助</router-link>
-    </section><!-- 底部链接区域 -->
   </div>
 </template>
 

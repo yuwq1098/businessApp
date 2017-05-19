@@ -23,23 +23,25 @@
             
         </section><!-- 登录框区域 -->
 
-        <section class="G-step-foot clearfix">
-            <a :href="'tel:'+telephone" class="G-link-txt box__fl">联系客服</a>
-            <router-link to="/help" class="G-link-txt box__fr">使用帮助</router-link>
-        </section><!-- 底部链接区域 -->
+        <step-foot></step-foot><!-- 底部帮助链接 -->
     </div>
 </template>
 
 <script type="text/javascript">
-export default {
-  name: "login",
-  data () {
-    return {
-      author: "Geek.Yu",
-      telephone: 18870836264
+    import stepFoot from '../public/foot/stepFoot.vue';
+    export default {
+        name: "login",
+        data () {
+            return {
+                author: "Geek.Yu",
+                telephone: 18870836264
+            }
+        },
+        // 引入组件
+        components:{
+            stepFoot,
+        },
     }
-  }
-}
 </script>
 
 <!-- “scoped” 让css只作用当前组件 -->

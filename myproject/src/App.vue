@@ -20,8 +20,7 @@
     	},
     	mounted() {
             setTimeout(() => {
-                console.log($("#welcome").attr("class"));
-                console.log(Velocity);
+                
             }, 2000);
         },
         components: {
