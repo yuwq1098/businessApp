@@ -16,7 +16,7 @@ $c_blue03 = $c_blue + 2 * 8% + 2 * .5deg
 $c_blue04 = $c_blue + 3 * 8% + 3 * .5deg
 $c_blue05 = $c_blue + 4 * 8% + 4 * .5deg
 //灰色
-$c_gray = #c2c5c8
+$c_gray = #d2d3d6
 $c_gray02 = $c_gray + -(1 * 8)% + -(1 * .5)deg
 $c_gray03 = $c_gray + -(2 * 8)% + -(2 * .5)deg
 $c_gray04 = $c_gray + -(3 * 8)% + -(3 * .5)deg
@@ -67,6 +67,7 @@ $c_white05 = $c_white + -(4 * 2.5)%
 //---字体大小变量
 $f_small  = 12px
 $f_normal = 13px
+$f_iptxt = 14px
 $f_medium = 15px
 $f_large  = 22px
 $f_super  = 30px
@@ -118,7 +119,7 @@ _box__show()
     display block
 
 //---边框线
-_boder(direction,color=$c_white03,pixel=1px)
+_border(direction,color=$c_white03,pixel=1px)
     border-{direction} pixel solid color
 
 //---严格盒模型
@@ -253,11 +254,13 @@ body
     _bgColor($c_white)
     &.transparent
         _bgColor(transparent)
+    .G-input-rimless
+        border: none
     .G-step-foot
         width 9rem
         _verticalLayout(0,0,auto,.35rem)
         .G-link-txt
-            _display(block)
+            _display()
             _spacingPlus(1px)
 
 //按钮
@@ -270,6 +273,19 @@ body
     &.G-btn-hollow
         border 1px solid $c_white05
         _btnColor($c_white,$c_black02,$c_white02,$c_black02)
+    &.G-btn-gray,&.G-btn-disabled
+        background $c_gray
+        color $c_black03
+    &.G-btn-full
+        _display()
+        width 100%
+        height 1.05rem
+        line-height 1.05rem
+        text-align center
+        font-size $f_medium
+        _spacingPlus(.25rem)
+        _borderRadius(.15rem)
+
 
 //链接
 .G-link-txt

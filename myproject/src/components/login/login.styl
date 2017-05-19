@@ -3,12 +3,61 @@
     height 100vh
     background-color $c_white
     _boxSizing()
-    padding .3rem
+    padding .4rem
+    .G-step-box
+        width 100%
+        padding .1rem 0
+        .G-input-box
+            min-height 1rem
+            line-height 1rem
+            color $c_black
+            font-size $f_iptxt
+            _boxSizing()
+            position relative
+            padding-left 2.1rem
+            _border(bottom)
+            *
+                _spacingPlus(1px)
+                vertical-align middle
+            .G-row-tit
+                width 1.7rem
+                position absolute
+                left 0
+                top 0
+                text-align right
+            .G-row-con
+                width 100%
+                .G-input-rimless
+                    width 100%
+                    height .8rem
+                    border: none
+                    font-size $f_iptxt
+                    vertical-align baseline
+                &.code
+                    _boxSizing()
+                    padding-right 2.5rem
+                    .right
+                        height .7rem
+                        min-height 20px
+                        padding 0 .15rem
+                        _completeCenter(auto,,,.1rem)
+                        _borderRadius(.1rem)
+            &:not(:last-child)
+                margin-bottom .15rem
+        #bind_user
+            margin-top .6rem
+        .register
+            _display()
+            margin-top .1rem
+            height .8rem
+            line-height .8rem
+            _spacingPlus()
     .G-page-box
         width 100%
         height 100%
         _boxSizing()
-        padding 1rem 0 0
+        padding 0
+
         .G-logo
             width 2rem
             height 2.05rem
@@ -27,10 +76,8 @@
             line-height 1.05rem
             text-align center
             font-size $f_medium
-            _borderRadius(.12rem)
+            _borderRadius(.15rem)
             _spacingPlus(4px)
             &.G-btn-primary
                 color #fff
                 margin-bottom .6rem
-
-

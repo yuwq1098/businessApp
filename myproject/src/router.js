@@ -21,7 +21,6 @@ const step2 = r => require.ensure([], () => r(require('./components/register/ste
 const step3 = r => require.ensure([], () => r(require('./components/register/step3.vue')), 'step3')
 const help = r => require.ensure([], () => r(require('./components/help/usinghelp.vue')), 'help')
 
-
 // 启用路由
 Vue.use(Router)
 

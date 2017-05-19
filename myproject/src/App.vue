@@ -3,7 +3,9 @@
         <transition name="G-fade" mode="out-in">
             <router-view></router-view>
         </transition>
+        
     </div>
+    
 </template>
 <script>
     require('./common/vendor/zepto.min.js');
