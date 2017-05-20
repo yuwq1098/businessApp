@@ -7,21 +7,39 @@
     _spacingPlus()
     position absolute
     top 0
-    left 0 
+    left 0
     text-align center
     .G-toast-box
 
 	    &.G-toast_success
-	        background-color $c_green02
+	        background-color #19DE8D
 	        color $c_white02
 	    &.G-toast_text
-	        background-color rgba(0,0,0,.35)
+	        background-color rgba(57,66,74,.5)
 	        color $c_white02
 	    &.G-toast_warn
-	        background-color $c_yellow02
+	        background-color #FBC730
+
 	        color $c_white02
 	    &.G-toast_error
-	        background-color $c_red02
+	        background-color #ff5443
 	        color $c_white02
+//-Â·ÓÉ¹ý¶É
+.toast-enter
+    transform translate3d(0, -100%, 0)
+    opacity 0
+.toast-leave
+    transform translate3d(0, 0, 0)
 
+.toast-enter-active
+    transition all .6s cubic-bezier(0, 0, 0.15, 1.1)
+.toast-leave-active 
+    transition all .3s cubic-bezier(0, 0, 0.15, 1.1)
+
+.toast-enter-to
+    transform translate3d(0, 0, 0)
+    opacity 1
+.toast-leave-to
+    transform translate3d(0, -100%, 0)
+    opacity .5
 

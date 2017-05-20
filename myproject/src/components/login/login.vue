@@ -22,95 +22,55 @@
             
         </section><!-- 登录框区域 -->
 
-        <div class="column is-12">
-            <label class="label" for="email">Email</label>
-            <p :class="{ 'control': true }">
-                <input v-validate="'required|email'" :class="{'input': true, 'is-danger': errors.has('email') }" name="email" type="text" placeholder="Email">
-                <span v-show="errors.has('email')" class="help is-danger">{{ errors.first('email') }}</span>
-            </p>
-            <label class="label" for="mobile">mobile</label>
-            <p :class="{ 'control': true }">
-                <input v-validate="'required|mobile'" :class="{'input': true, 'is-danger': errors.has('mobile') }" name="mobile" type="text" placeholder="mobile">
-                <span v-show="errors.has('mobile')" class="help is-danger">{{ errors.first('mobile') }}</span>
-            </p>
-        </div>
+        <!-- 提示组件 -->
+        <g-toast
+                :type="toast.type"
+                :time="toast.time"
+                :value="toast.value"
+            >
+        </g-toast>
 
         <step-foot></step-foot><!-- 底部帮助链接 -->
     </div>
 </template>
 
-
 <script type="text/javascript">
     import stepFoot from '../public/foot/stepFoot.vue';
+    import gToast from '../module/gtoast/toast.vue';
+
     export default {
         name: "login",
         data () {
             return {
-                comment:"",
-                username: "",
-                password: "",
-                newpassword:"",
-                matchPassword:false,
-                $validatorMethod: {}
-            }
-        },
-        mounted(){
-            setTimeout(() => {
-                console.log("aaaa");
-            }, 2000);
-        },
-        validators: {
-            noempty:function(val){
-                var reg = /^\s*$/g, isFlag = true;
-                if(val == "" || reg.test(val)){
-                    isFlag = false;
-                }
-                return  isFlag;
-            },
-            username: function (val) {
-                return /^[A-Za-z0-9_\-\u4e00-\u9fa5]{1,10}$/.test(val);
-            },
-            integer: function (val) {
-                return /^[1-9]\d*$/.test(val);
-            },
-            match:function (val,result) {
-                return result;
+                toast: {
+                    type: "warn",
+                    time: 2500,
+                    value: false
+                },
             }
         },
         // 引入组件
         components:{
             stepFoot,
+            gToast,
         },
+        // 定义函数方法
         methods:{
-            passwInvalid(){
-                alert('只能输入6-20个字母、数字、下划线');
-            },
-            passwok(){
-                //alert('验证码符合规范')
-            },
-            loginMethods:function () {
-                var self = this;
-                /**
-                 * 验证目标表单元素。
-                 * true:验证所有
-                 */
-                self.$validate(true,function () {
-                    /*如果所有条件都是false*/
-                    if(!self.$validatorMethod.invalid){
-                        alert("登录成功");
-                    }
-                })
-            }
+            
         },
+        // 声明周期，vue实例挂载好的时候
+        mounted(){
+            setTimeout(() => {
+                this.toast.value = "你好，我是geek.yu的toast"
+            },2000);
+        },
+        // 属性值计算
         computed:{
-            matchPassword:function () {
-                return this.password == this.newpassword
-            }
+            
         },
+        // 侦听数据
         watch: {
-            'passw': function(){
-                console.log("aaaa");
-            }
+            
         }
     }
 
