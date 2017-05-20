@@ -12,12 +12,25 @@
         </section><!-- 登录框区域 -->
 
         <step-foot></step-foot><!-- 底部帮助链接 -->
-
+        
+        <div v-if="toastShow">
+            <g-toast
+                    type="warn"
+                    time="5000"
+                    :value="value"
+                    text="我笑了"
+                    style=""
+                >
+            </g-toast>
+        </div>
+        
     </div>
 </template>
 
 <script type="text/javascript">
     import stepFoot from '../public/foot/stepFoot.vue';
+    import gToast from '../module/gtoast/toast.vue';
+
     export default {
         name: "welcome",
         data () {
@@ -28,12 +41,21 @@
                 data: {
                     logoUrl: "static/img/LOGO.png",
                     logoTit: "商机宝LOGO",
-                }
+                },
+                value: "呵呵阿达",
+                toastShow: false
             }
         },
         // 引入组件
         components:{
             stepFoot,
+            gToast,
+        },
+        mounted(){
+            setTimeout(() => {
+                this.value = "1854"
+                this.toastShow = true
+            },2500)
         },
     }
 </script>

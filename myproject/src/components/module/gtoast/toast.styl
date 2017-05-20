@@ -1,0 +1,27 @@
+@import '../../../common/css/app'
+.G-toast
+    width 100%
+    height .9rem
+    line-height .9rem
+    font-size $f_normal
+    _spacingPlus()
+    position absolute
+    top 0
+    left 0 
+    text-align center
+    .G-toast-box
+
+	    &.G-toast_success
+	        background-color $c_green02
+	        color $c_white02
+	    &.G-toast_text
+	        background-color rgba(0,0,0,.35)
+	        color $c_white02
+	    &.G-toast_warn
+	        background-color $c_yellow02
+	        color $c_white02
+	    &.G-toast_error
+	        background-color $c_red02
+	        color $c_white02
+
+

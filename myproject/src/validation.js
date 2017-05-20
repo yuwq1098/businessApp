@@ -13,5 +13,3 @@ Vue.validator('tel', function (val) {
 Vue.validator('passw', function (val) {
   return /^(\w){6,20}$/.test(val)
 });
-
-console.log("aaaa");
