@@ -58,8 +58,9 @@
         },
         // 定义函数方法
         methods:{
-            validate: function (obj,rule) {
-                
+            validate: function (obj,rule,...arg) {
+
+                //验证规则
                 var regular = {
                     "mobile": function(){
                         return /^(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{8}$/.test(obj);
@@ -81,19 +82,34 @@
                     },
                     "code__len__6": function(){
                         return /^[A-Za-z0-9]{6}$/.test(obj);    
+                    },
+                    "maxlength": function(num){
+                        console.log(num);
+                        return /^[A-Za-z0-9]{0,8}$/.test(obj);  
+                    }
+                }
+
+                if(/^maxlength.*$/.test(rule)){
+                    if(/^maxlength__.*$/.test(rule)==false){
+                        console.log("语法不对");
+                        return false;  
+                    }
+                    var num = rule.replace(/maxlength__/,"");
+                    return regular["maxlength"](num);
+
+                }else{
+                    //找到指定的验证
+                    for (var verify in regular) {
+                        if(verify==rule) return regular[verify]();
                     }
                 }
                 
-                for (var val of regular) {
-                    if(val==rule) return regular[val];
-                }
-
             }
         },
         // 声明周期，vue实例挂载好的时候
         mounted(){
             setTimeout(() => {
-
+                
             },2000);
         },
         // 属性值计算
@@ -103,12 +119,11 @@
         // 侦听数据
         watch: {
             telephone(val){
-                console.log(val)
-                var res =  this.validate(val,"mobile");
-                console.log(res);
+                var result = this.validate(val,"maxlength__8");
+                console.log(result);
             },
             code(val){
-                console.log(val)
+                console.log(val);
             }
         }
     }
