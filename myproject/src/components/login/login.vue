@@ -4,14 +4,14 @@
             <div class="G-input-box">
                 <div class="G-row-tit">手机号</div>
                 <div class="G-row-con">
-                    <input type="tel" v-model="user_phone" placeholder="请输入手机号" class="G-input-rimless G-input-all"/>
+                    <input type="tel" v-model="telephone" placeholder="请输入手机号" class="G-input-rimless G-input-all"/>
                 </div>
             </div>
 
             <div class="G-input-box">
                 <div class="G-row-tit">验证码</div>
                 <div class="G-row-con code">
-                    <input  type="tel" placeholder="请输入验证码" class="G-input-rimless"/> 
+                    <input  type="tel" v-model="code" placeholder="请输入验证码" class="G-input-rimless"/> 
                     <button class="G-btn G-btn-disabled right">获取验证码</button>
                 </div>
             </div>
@@ -47,6 +47,8 @@
                     time: 2500,
                     value: false
                 },
+                telephone: "",
+                code: "",
             }
         },
         // 引入组件
@@ -56,12 +58,42 @@
         },
         // 定义函数方法
         methods:{
-            
+            validate: function (obj,rule) {
+                
+                var regular = {
+                    "mobile": function(){
+                        return /^(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{8}$/.test(obj);
+                    },
+                    "email": function(){
+                        return /^1[3|5|8]\d{9}$/.test(obj);
+                    },
+                    "card": function(){
+                        return /^\d{15}|\d{18}$/.test(obj);    
+                    },
+                    "datetime": function(){
+                        return /^\d{4}-\d{1,2}-\d{1,2}$/.test(obj);   
+                    }, 
+                    "code": function(){
+                        return /^[A-Za-z0-9]{4,6}$/.test(obj);    
+                    },
+                    "code__len__4": function(){
+                        return /^[A-Za-z0-9]{4}$/.test(obj);
+                    },
+                    "code__len__6": function(){
+                        return /^[A-Za-z0-9]{6}$/.test(obj);    
+                    }
+                }
+                
+                for (var val of regular) {
+                    if(val==rule) return regular[val];
+                }
+
+            }
         },
         // 声明周期，vue实例挂载好的时候
         mounted(){
             setTimeout(() => {
-                this.toast.value = "你好，我是geek.yu的toast"
+
             },2000);
         },
         // 属性值计算
@@ -70,7 +102,14 @@
         },
         // 侦听数据
         watch: {
-            
+            telephone(val){
+                console.log(val)
+                var res =  this.validate(val,"mobile");
+                console.log(res);
+            },
+            code(val){
+                console.log(val)
+            }
         }
     }
 
