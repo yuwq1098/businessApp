@@ -25,7 +25,6 @@
 	*/
     export default {
     	props:{
-			style: String,
 			value: String,
 		    time: {
 		        type: Number,
@@ -35,12 +34,12 @@
 		        type: String,
 		        default: 'success'
 		    },
-		    text: String,
 		},
 		// 数据
 		data () {
 		    return {
-		        show: false
+		        show: false,
+		        text: String,
 		    }
 		},
 		// vue实例创建时
@@ -68,7 +67,7 @@
 		        if (val) {
 		        	clearTimeout(this.timeout)
 			        this.timeout = setTimeout(() => {
-			            this.show = false
+			            this.show = false;
 			        }, this.time)
 			    }
 		    },

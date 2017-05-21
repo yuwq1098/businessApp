@@ -19,7 +19,7 @@
         opacity 1
     
     .G-fade-enter-active
-        transition all .3s cubic-bezier(0.27, 0.68, 0.51, 0.92)
+        transition all .18s cubic-bezier(0.27, 0.68, 0.51, 0.92)
     .G-fade-leave-active 
         transition all 0s cubic-bezier(0.27, 0.68, 0.51, 0.92)
     
