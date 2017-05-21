@@ -1,4 +1,6 @@
-import App from './App'
+import Vue from 'vue'
+//vue 路由模块 vue-router 
+import Router from "vue-router";
 
 // 定义组件
 const example__color = r => require.ensure([], () => r(require('./components/example/color.vue')), 'color')
@@ -19,11 +21,12 @@ const step2 = r => require.ensure([], () => r(require('./components/register/ste
 const step3 = r => require.ensure([], () => r(require('./components/register/step3.vue')), 'step3')
 const help = r => require.ensure([], () => r(require('./components/help/usinghelp.vue')), 'help')
 
+// 启用路由
+Vue.use(Router)
+
 // 定义路由
-export default [{
-	path: '/',
-    component: App, //顶层路由，对应index.html
-    children: [
+export default new Router({
+    routes: [
         {
         	path: '',
             redirect: '/welcome'
@@ -89,4 +92,4 @@ export default [{
 	        component: example__green
 	    }    
 	]
-}]
+})

@@ -23,12 +23,12 @@
         </section><!-- 登录框区域 -->
 
         <!-- 提示组件 -->
-        <g-toast
+        <!-- <g-toast
                 :type="toast.type"
                 :time="toast.time"
                 :value="toast.value"
             >
-        </g-toast>
+        </g-toast> -->
 
         <step-foot></step-foot><!-- 底部帮助链接 -->
     </div>
@@ -54,7 +54,7 @@
         // 引入组件
         components:{
             stepFoot,
-            gToast,
+            // gToast,
         },
         // 定义函数方法
         methods:{

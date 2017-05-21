@@ -1,5 +1,6 @@
 <template>
     <div id="step1" class="G-page">
+    
         <section class="G-page-box">
             <my-register></my-register>
             <section class="G-step-box">
@@ -25,8 +26,8 @@
         </section>
         
         <step-foot></step-foot><!-- 底部帮助链接 -->
+
     </div>
-    
 </template>
 
 <script type="text/javascript">
