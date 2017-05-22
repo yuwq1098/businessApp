@@ -18,6 +18,7 @@ const step1 = r => require.ensure([], () => r(require('./components/register/ste
 const step2 = r => require.ensure([], () => r(require('./components/register/step2.vue')), 'step2')
 const step3 = r => require.ensure([], () => r(require('./components/register/step3.vue')), 'step3')
 const help = r => require.ensure([], () => r(require('./components/help/usinghelp.vue')), 'help')
+const clue = r => require.ensure([], () => r(require('./components/clue/clue.vue')), 'clue')
 
 // 定义路由
 export default [{
@@ -51,6 +52,10 @@ export default [{
 	    {
 	        path: '/step3',
 	        component: step3
+	    },
+	    {
+	        path: '/clue',
+	        component: clue
 	    },
 	    {
 	        path: '/help',

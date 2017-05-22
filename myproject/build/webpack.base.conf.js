@@ -2,6 +2,7 @@ var webpack = require("webpack");
 var path = require('path')
 var utils = require('./utils')
 var config = require('../config')
+const vuxLoader = require('vux-loader')
 var vueLoaderConfig = require('./vue-loader.conf')
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 function resolve (dir) {
@@ -11,8 +12,9 @@ function resolve (dir) {
 var extractCSS = new ExtractTextPlugin('css/[name].css?[contenthash]')
 var cssLoader = extractCSS.extract(['css'])
 var stylLoader = extractCSS.extract(['css', 'styl'])
+var lessLoader = extractCSS.extract(['css', 'less'])
 
-module.exports = {
+const webpackConfig = {
   entry: {
     app: './src/main.js'
   },
@@ -48,7 +50,8 @@ module.exports = {
         loader: 'url?limit=10000&name=fonts/[hash:8].[name].[ext]'
       },
       {test: /\.css$/, loader: cssLoader},
-      {test: /\.styl$/, loader: stylLoader}
+      {test: /\.styl$/, loader: stylLoader},
+      {test: /\.less$/, loader: lessLoader}
     ],
     rules: [
       {
@@ -85,3 +88,5 @@ module.exports = {
     ]
   }
 }
+
+module.exports = vuxLoader.merge(webpackConfig, { plugins: ['vux-ui'] })
