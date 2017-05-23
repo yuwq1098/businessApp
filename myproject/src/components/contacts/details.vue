@@ -73,5 +73,5 @@
 
 <!-- “scoped” 让css只作用当前组件 -->
 <style lang="stylus" rel="stylesheet/stylus" scoped>
-  @import './clue.styl'
+  @import './contact.styl'
 </style>
