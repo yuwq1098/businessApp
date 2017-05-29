@@ -8,6 +8,8 @@ import routes from './router'
 import Fastclick from './common/vendor/fastclick'
 import flexible from './common/vendor/flexible'
 
+import './common/css/index.styl'
+
 
 Vue.use(VueRouter);
 Vue.use(VueResource);

@@ -1,0 +1,81 @@
+@import "../../common/css/mixin.styl"
+
+.G-page
+    background transparent
+    .G-search-box
+        width 100%
+        height 44px
+        background #f4f4f4
+        _boxSizing()
+        padding 8px
+        .u-lk
+            _display(block)
+            width 100%
+            height 28px
+            .m-srh
+                background #fff
+                width @width
+                height @height
+                line-height @height - 2px
+                _boxSizing()
+                _borderRadius(4px)
+                border 1px solid #f0f0f0
+                text-align center
+                color #959595
+                .u-count
+                	margin 0 4px
+    .G-list-box
+    	.u-lk
+            color $c_black03
+        .tel-list
+        	width 100%
+        	background #fff
+        	_border(top,#e2e2e2)
+        	_border(bottom,#e2e2e2)
+        	.m-item
+        		&:not(:last-child)
+        			_border(bottom,#ededed)
+        		.u-lk
+        			width @width
+        			_boxSizing()
+        			padding .1rem .3rem
+        			_display()
+        			color $c_black03
+        			position relative
+        			.u-name
+        				font-size 15px
+        				_spacingPlus(1px)
+        				line-height 22px
+        			.u-tel
+        				font-size 13px
+        				line-height 18px
+        				color #959595
+	        		.iconfont
+	        			width 20px
+	        			text-align center
+	        			height 20px
+	        			line-height 20px
+	        			color $c_green
+	        			_verticalLayout(,.3rem)
+        			
+        .no-item
+            line-height 54px
+            height 54px
+            text-align center
+            color #777
+            font-size 14px
+            _spacingPlus(1px)
+            
+    .g-add-ball
+    	width 48px
+    	height 48px
+    	position fixed
+    	bottom 88px
+    	right .35rem
+    	.iconfont
+    		font-size 48px
+    		color $c_green
+    	
+            		
+            	
+    	

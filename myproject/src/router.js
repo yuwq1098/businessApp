@@ -19,6 +19,13 @@ const step2 = r => require.ensure([], () => r(require('./components/register/ste
 const step3 = r => require.ensure([], () => r(require('./components/register/step3.vue')), 'step3')
 const help = r => require.ensure([], () => r(require('./components/help/usinghelp.vue')), 'help')
 const clue = r => require.ensure([], () => r(require('./components/clue/clue.vue')), 'clue')
+const contacts_list = r => require.ensure([], () => r(require('./components/contacts/list.vue')), 'contacts_list')
+const contacts_details = r => require.ensure([], () => r(require('./components/contacts/details.vue')), 'contacts_details')
+const contacts_edit = r => require.ensure([], () => r(require('./components/contacts/edit.vue')), 'contacts_edit')
+const my_clue_details = r => require.ensure([], () => r(require('./components/clue/my_clue_details.vue')), 'my_clue_details')
+
+
+
 
 // 定义路由
 export default [{
@@ -56,6 +63,22 @@ export default [{
 	    {
 	        path: '/clue',
 	        component: clue
+	    },
+	    {
+	        path: '/contactsDetails',
+	        component: contacts_details
+	    },
+	    {
+	        path: '/contacts',
+	        component: contacts_list
+	    },
+	    {
+            path: '/contactsEdit',
+            component: contacts_edit
+	    },
+	    {
+            path: '/clueDetailsMy',
+            component: my_clue_details
 	    },
 	    {
 	        path: '/help',

@@ -1,0 +1,40 @@
+@import "../../common/css/mixin.styl"
+
+.G-page
+    background transparent
+    .m-tb-group
+    	font-size 14px
+    	background #fafafa
+    	color #545454
+    	_border(top,#e2e2e2)
+    	_border(bottom,#e2e2e2)
+    	_boxSizing()
+    	padding 0 .3rem
+    	.m-line
+    		height 38px
+    		line-height 38px
+    		_boxSizing()
+    		position relative
+    		padding-left 78px
+    		&:not(:last-child)
+    			_border(bottom,#ededed)
+    		.m-tit
+    			width 64px
+    			_display()
+    			position absolute
+    			left 0
+    			text-align right
+    		.m-con
+    			width 100%
+    			color #959595
+    			position relative
+    			.iconfont
+    				position absolute
+    				right 0
+    				top 0
+    				color $c_green
+    		&.v2
+    			height auto
+    			.m-con
+    				line-height 24px
+    				padding 7px 0

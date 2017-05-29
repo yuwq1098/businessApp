@@ -1,0 +1,42 @@
+@import "../../../common/css/mixin.styl"
+.G-foot-nav
+    width 100%
+    height 48px
+    position fixed
+    left 0
+    bottom 0
+    _border(top,#e2e2e2)
+    background #fff
+    .m-nav-list
+        width @width
+        height @height
+        _boxSizing()
+        padding 0 .25rem
+        .u-nav-item
+            width 33.33%
+            float left
+            text-align center
+            .u-lk
+                _display()
+                height 48px
+                color #777
+                _boxSizing()
+                padding-top 4px 
+            .u-ico
+                font-size 18px
+                line-height 24px
+            .u-tit
+                font-size 12px
+                line-height 16px
+                _spacingPlus(2px)
+            &.on
+                .u-lk
+                    color $c_green
+                    
+        
+        
+        
+                    
+            
+           
+        

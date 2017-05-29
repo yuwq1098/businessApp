@@ -2,26 +2,36 @@
     <div id="contacts" class="G-page">
 
         <section class="G-search-box">
-            <a href="javascript:;">
-                <div>
-                    <i class="iconfont"></i>
-                    <p>搜索姓名或手机号</p>
+            <a href="javascript:;" class="u-lk">
+                <div class="m-srh">
+                    <i class="iconfont icon-sousuo"></i>
+                    <span class="u-count">共1条</span>搜索姓名或手机号
                 </div>
             </a>
         </section><!-- 搜索 -->
 
         <div class="G-list-box">
             <section class="tel-list">
-                <div class="tel-item">
-                    <a href="javascript:;">
-                        <p>
-                            <div class="u_name">陈永兴</div>
-                        </p>
-                        <p>
-                            <div class="u_telephone">15125798692</div>
-                        </p>
-                        <i class="iconfont"></i>
-                    </a>
+                <div class="m-item">
+                    <router-link :to="{path:'/contactsDetails'}" class="u-lk">
+                        <div class="u-name">陈永兴</div>
+                        <div class="u-tel">15125798692</div>
+                        <i class="iconfont icon-dianhua"></i>
+                    </router-link>
+                </div>
+                <div class="m-item">
+                    <router-link :to="{path:'/contactsDetails'}" class="u-lk">
+                        <div class="u-name">陈永兴</div>
+                        <div class="u-tel">15125798692</div>
+                        <i class="iconfont icon-dianhua"></i>
+                    </router-link>
+                </div>
+                <div class="m-item">
+                    <router-link :to="{path:'/contactsDetails'}" class="u-lk">
+                        <div class="u-name">陈永兴</div>
+                        <div class="u-tel">15125798692</div>
+                        <i class="iconfont icon-dianhua"></i>
+                    </router-link>
                 </div>
             </section><!-- 电话簿列表 -->
             <section class="no-item">
@@ -30,33 +40,17 @@
         </div><!-- 联系人列表容器 -->
 
         <section class="g-add-ball">
-            <i class="iconfont"></i>
+            <i class="iconfont icon-tianjia"></i>
         </section><!-- 添加线索 -->
-
-        <footer class="G-foot-nav">
-            <ul class="clearfix">
-                <li class="box__fl">
-                    <i class="iconfont"></i>
-                    <span>线索</span>
-                </li>
-                <li class="box__fl active">
-                    <i class="iconfont"></i>
-                    <span>联系人</span>
-                </li>
-                <li class="box__fl">
-                    <i class="iconfont"></i>
-                    <span>我的</span>
-                </li>
-            </ul>
-
-        </footer>
-
+        
+        <!-- 引入底部 -->
+        <c-foot :nav-item="2"></c-foot>
         
     </div>
 </template>
 
 <script type="text/javascript">
-
+    import cFoot from '../public/foot/footer.vue'
     export default {
         name: "clue",
         data () {
@@ -73,7 +67,7 @@
         },
         // 引入组件
         components:{
-
+            cFoot,
         },
         // 声明周期，vue实例挂载好的时候
         mounted(){

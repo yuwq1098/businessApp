@@ -1,6 +1,8 @@
 <template>
     <transition name="G-fade" mode="out-in">
-        <router-view ></router-view>
+        <keep-alive>
+            <router-view ></router-view>
+        </keep-alive>
     </transition>
 </template>
 <script>
@@ -10,9 +12,7 @@
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">
-    @import './common/css/reset'
-    @import './common/css/app'
-    
+
     //-路由过渡
     .G-fade-enter
         transform translate3d(100%, 0, 0)

@@ -1,88 +1,91 @@
 <template>
     <div id="clue" class="G-page">
-        <section class="G-tabnav-box">
-            <a href="javascript:;">我的线索</a>
-            <a href="javascript:;">抢购线索</a>
+        <section class="G-tabnav-box f__clearfix">
+            <a href="javascript:;" class="u-lk on">我的线索</a>
+            <a href="javascript:;" class="u-lk">抢购线索</a>
         </section><!-- 选项卡 -->
 
         <section class="G-search-box">
-            <a href="javascript:;">
-                <div>
-                    <i class="iconfont"></i>
-                    <p>搜索姓名或手机号</p>
+            <a href="javascript:;" class="u-lk">
+                <div class="m-srh">
+                    <i class="iconfont icon-sousuo"></i>搜索姓名或手机号
                 </div>
             </a>
         </section><!-- 搜索 -->
 
         <div class="G-list-box">
             <section class="recd-list">
-                <div class="recd-item">
-                    <a href="javascript:;">
-                        <h3 class="">
-                            <span>推荐</span>仓栅式半挂
+                <div class="m-item">
+                    <a href="javascript:;" class="u-lk">
+                        <h3 class="m-tit">
+                            <span class="u-flag">推荐</span>仓栅式半挂
                         </h3>
-                        <p>
-                            <div class="box__fl">
-                                <span class="u_district">河北·石家庄</span>
+                        <section class="u-line f__clearfix">
+                            <div class="f__fl">
+                                <span class="u_area">河北 石家庄</span>
                                 <span class="u_name">李亮</span>
                             </div>
-                            <div class="box__fr">7小时</div>
-                        </p>
-                        <p>
-                            <div class="box__fl">
-                                <span>独享</span>
+                            <div class="f__fr">五分钟前</div>
+                        </section>
+                        <section class="u-line v2 f__clearfix">
+                            <div class="f__fl">
+                                <span class="u-lab">独享</span>
                             </div>
-                            <a href="javascript:;" class="box__fr">点击查看</a>
-                        </p>
+                            <a href="javascript:;" class="f__fr u-btn">点击查看</a>
+                        </section>
+                    </a>
+                </div>
+                <div class="m-item">
+                    <a href="javascript:;" class="u-lk">
+                        <h3 class="m-tit">
+                            <span class="u-flag">推荐</span>仓栅式半挂
+                        </h3>
+                        <section class="u-line f__clearfix">
+                            <div class="f__fl">
+                                <span class="u_area">四川 达州</span>
+                                <span class="u_name">刘洪</span>
+                            </div>
+                            <div class="f__fr">7小时</div>
+                        </section>
+                        <section class="u-line v2 f__clearfix">
+                            <div class="f__fl">
+                                <span class="u-lab">独享</span>
+                            </div>
+                            <a href="javascript:;" class="f__fr u-btn u-not-see">点击查看</a>
+                        </section>
                     </a>
                 </div>
             </section><!-- 推荐线索列表 -->
             <section class="contact-list">
-                <div class="contact-item">
-                    <a href="javascript:;">
-                        <h3 class="">
-                            <span class="u_name"></span>
-                            <span class="u_district_">云南 楚雄</span>
+                <div class="m-item">
+                    <a href="javascript:;" class="u-lk">
+                        <h3 class="m-tit">
+                            <span class="u_name">陈永兴</span>
+                            <span class="u_area">云南 楚雄</span>
                         </h3>
-                        <p>
+                        <section class="u-line">
                             <div class="c_model">栏板式半挂</div>
-                        </p>
-                        <p>
+                        </section>
+                        <section class="u-line">
                             <div class="issue_time">2017/05/22</div>
-                        </p>
-                        <i class="iconfont"></i>
+                        </section>
+                        <i class="iconfont icon-arrowright1"></i>
                     </a>
                 </div>
             </section><!-- 联系人列表 -->
             <section class="no-item">
-                <p>~我是有底线的~</p>
+                <p>~我是有底线滴~</p>
             </section>
         </div><!-- 线索列表容器 -->
 
-        <footer class="G-foot-nav">
-            <ul class="clearfix">
-                <li class="box__fl active">
-                    <i class="iconfont"></i>
-                    <span>线索</span>
-                </li>
-                <li class="box__fl">
-                    <i class="iconfont"></i>
-                    <span>联系人</span>
-                </li>
-                <li class="box__fl">
-                    <i class="iconfont"></i>
-                    <span>我的</span>
-                </li>
-            </ul>
-
-        </footer>
-
+        <!-- 引入底部 -->
+        <c-foot :nav-item="1"></c-foot>
         
     </div>
 </template>
 
 <script type="text/javascript">
-
+    import cFoot from '../public/foot/footer.vue'
     export default {
         name: "clue",
         data () {
@@ -99,7 +102,7 @@
         },
         // 引入组件
         components:{
-
+            cFoot,
         },
         // 声明周期，vue实例挂载好的时候
         mounted(){

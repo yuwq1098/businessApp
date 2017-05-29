@@ -158,5 +158,7 @@
 
 <!-- “scoped” 让css只作用当前组件 -->
 <style lang="stylus" rel="stylesheet/stylus" scoped>
-  @import './clue.styl'
+  @import './buy_clue.styl'
+  body 
+    background #e45
 </style>

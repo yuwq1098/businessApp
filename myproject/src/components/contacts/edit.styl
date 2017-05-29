@@ -1,0 +1,72 @@
+@import "../../common/css/mixin.styl"
+
+.G-page
+    background transparent
+    .m-line-gp
+    	_border(top,#e2e2e2)
+    	_border(bottom,#e2e2e2)
+    	background #fafafa
+    	color #545454
+    	_boxSizing()
+    	padding 0 .3rem
+    	&.f__mt20
+    		margin-top .20rem
+    	.m-gp-box
+            width 100%
+            height 36px
+            line-height 36px
+            font-size 14px
+            position relative
+            _boxSizing()
+            padding-left 84px
+            .u-tit
+                width 66px
+                _display()
+                position absolute
+                left 0
+                top 0
+                text-align right
+                &.vital::before
+                    content "*"
+                    color $c_red
+                    margin-right 1px
+            .u-con
+                position relative
+                .iconfont
+                    margin-left 3px
+                    font-size 16px
+                    color #c2c2c2
+            &:not(:last-child)::after
+                content ""
+                _display()
+                width 100%
+                height 1px
+                background #ededed
+                position absolute
+                bottom 0
+                left 0
+                z-index 999
+            &.v2
+                height 165px
+                .u-con
+                    height @height
+                    width 100%
+                    position relative
+                    .u-txta
+                        width 100%
+                        border none
+                        height 110px
+                        line-height 22px
+                        margin-top 7px
+                        font-size 14px
+                        color #545454
+                    .u-word
+                        position absolute
+                        right 0
+                        bottom 5px
+                        line-height 28px
+                        font-size 15px
+                        color #959595
+                        
+                    
+
