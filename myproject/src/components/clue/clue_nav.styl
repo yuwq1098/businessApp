@@ -1,0 +1,28 @@
+@import "../../common/css/mixin.styl"
+
+
+.m-tabnav-box
+    height 50px
+    box-sizing border-box
+    background #fff
+    _border(bottom,#ededed,1px)
+    .u-lk
+        line-height 49px
+        width 50%
+        float left
+        text-align center
+        font-size 15px
+        _spacingPlus(1px)
+        color $c_black
+        position relative
+        &.on
+        	color $c_green
+        	&::after
+        		content ""
+        		display block
+            	width 100%
+            	height 2px
+            	background $c_green
+            	position absolute
+            	left 0
+            	bottom 0

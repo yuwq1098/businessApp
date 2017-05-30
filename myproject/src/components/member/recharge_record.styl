@@ -2,12 +2,62 @@
 
 .G-page
     background transparent
-    .G-line-info
+    .m-line-gp
     	background transparent
-	.m-no-record
-		background transparent
-		height 100%
-		width 100%
-		position fixed
-		top 0
-		background #e45
+    	.m-item
+    		_border(top,#ededed)
+    		_border(bottom,#ededed)
+    		background #fff
+    		color #545454
+    		margin-top .20rem
+    		height 38px
+    		line-height 38px
+    		position relative
+    		padding 0 4rem 0 3.8rem
+    		p.count
+    			width 100%
+    			text-align center
+    		.u-txt
+    			position absolute
+    			_display()
+    			white 3.4rem
+    			left .3rem
+    			text-align left
+    			.vital
+    				color #f43
+    		.u-time
+    			position absolute
+    			_display()
+    			white 3.6rem
+    			right .3rem
+    			top 0
+    			text-align right
+    		
+    		
+    .m-no-record
+    	background transparent
+    	height 100%
+    	width 100%
+    	position fixed
+    	top 0
+    	.u-con
+    		width 8rem
+    		height 3.2rem
+    		_boxSizing()
+    		position relative
+    		_display()
+    		_completeCenter()
+    		.u-pic
+    			width 2.2rem
+    			height 2.2rem
+    			_completeCenter(,,0,auto)
+    		.u-txt
+    			width 100%
+    			text-align center
+    			height .7rem
+    			line-height .7rem
+    			font-size 13px
+    			_spacingPlus()
+    			color #959595
+    			_completeCenter(,,auto,0)
+    			

@@ -1,5 +1,5 @@
 <template>
-    <div id="clue" class="G-page">
+    <div id="my_clue_details" class="G-page">
         <section class="m-tb-group f__mt20">
             <div class="m-line">
                 <span class="m-tit">意向车型</span>
@@ -31,7 +31,7 @@
         <link-foot :item-size="3">
             <a slot="s-btn-a" href="javascript:;" class="u-btn">返回</a>
             <a slot="s-btn-b" href="javascript:;" class="u-btn">编辑</a>
-            <a slot="s-btn-b" href="javascript:;" class="u-btn">添加跟进记录</a>
+            <a slot="s-btn-c" href="javascript:;" class="u-btn">添加跟进记录</a>
         </link-foot>
 
     </div>
@@ -41,7 +41,7 @@
     
     import linkFoot from '../contacts/sfoot.vue'
     export default {
-        name: "clue",
+        name: "my_clue_details",
         data () {
             return {
                  

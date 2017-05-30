@@ -1,9 +1,5 @@
 <template>
-    <div id="clue" class="G-page">
-        <section class="G-tabnav-box">
-            <a href="javascript:;">我的线索</a>
-            <a href="javascript:;" class="active">抢购线索</a>
-        </section><!-- 选项卡 -->
+    <div id="clue" class="G-page" :tapItem="2">
 
         <section class="G-search-box clearfix">
             <div class="box__fl">

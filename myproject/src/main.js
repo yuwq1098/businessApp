@@ -6,6 +6,8 @@ import VueResource from 'vue-resource'
 import routes from './router'
 //Fastclick(解决移动端300s延迟事件)
 import Fastclick from './common/vendor/fastclick'
+//引入jq
+import $ from './common/vendor/jquery.min.js'
 import flexible from './common/vendor/flexible'
 
 import './common/css/index.styl'

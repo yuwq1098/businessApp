@@ -87,14 +87,7 @@
         name: "clue",
         data () {
             return {
-                author: {
-                    tel: 18870836264,
-                },
-                data: {
-                    logoUrl: "static/img/LOGO.png",
-                    logoTit: "商机宝LOGO",
-                },
-                value: false,
+                
             }
         },
         // 引入组件

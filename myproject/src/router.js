@@ -19,15 +19,19 @@ const step2 = r => require.ensure([], () => r(require('./components/register/ste
 const step3 = r => require.ensure([], () => r(require('./components/register/step3.vue')), 'step3')
 const help = r => require.ensure([], () => r(require('./components/help/usinghelp.vue')), 'help')
 const clue = r => require.ensure([], () => r(require('./components/clue/clue.vue')), 'clue')
+const my_clue = r => require.ensure([], () => r(require('./components/clue/my_clue.vue')), 'my_clue')
+const buy_clue = r => require.ensure([], () => r(require('./components/clue/buy_clue.vue')), 'buy_clue')
 const contacts_list = r => require.ensure([], () => r(require('./components/contacts/list.vue')), 'contacts_list')
 const contacts_details = r => require.ensure([], () => r(require('./components/contacts/details.vue')), 'contacts_details')
 const contacts_edit = r => require.ensure([], () => r(require('./components/contacts/edit.vue')), 'contacts_edit')
 const my_clue_details = r => require.ensure([], () => r(require('./components/clue/my_clue_details.vue')), 'my_clue_details')
+const buy_clue_details = r => require.ensure([], () => r(require('./components/clue/buy_clue_details.vue')), 'buy_clue_details')
 const member = r => require.ensure([], () => r(require('./components/member/member.vue')), 'member')
 const recharge = r => require.ensure([], () => r(require('./components/member/recharge.vue')), 'recharge')
 const message = r => require.ensure([], () => r(require('./components/member/message.vue')), 'message')
 const recharge_record = r => require.ensure([], () => r(require('./components/member/recharge_record.vue')), 'recharge_record')
 const agreement = r => require.ensure([], () => r(require('./components/member/agreement.vue')), 'agreement')
+
 
 
 
@@ -66,7 +70,18 @@ export default [{
 	    },
 	    {
 	        path: '/clue',
-	        component: clue
+	        component: clue,
+	        redirect: '/clue/myClue',
+	        children: [
+	            {
+                    path: 'myClue',
+	                component: my_clue,
+	            },
+	            {
+                    path: 'buyClue',
+	                component: buy_clue,
+	            },
+            ]
 	    },
 	    {
 	        path: '/contactsDetails',
@@ -83,6 +98,10 @@ export default [{
 	    {
             path: '/clueDetailsMy',
             component: my_clue_details
+	    },
+	    {
+            path: '/clueDetailsBuy',
+            component: buy_clue_details
 	    },
 	    {
             path: '/member',

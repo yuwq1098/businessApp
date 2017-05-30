@@ -1,82 +1,15 @@
 <template>
     <div id="clue" class="G-page">
         <section class="G-tabnav-box f__clearfix">
-            <a href="javascript:;" class="u-lk on">我的线索</a>
-            <a href="javascript:;" class="u-lk">抢购线索</a>
+            <a href="javascript:;"  @click.stop="tapSwitch(1)" ref="itema" class="u-lk" :class="tapItem==1?'on':''">我的线索</a>
+            <a href="javascript:;" @click.stop="tapSwitch(2)" ref="itemb" class="u-lk" :class="tapItem==2?'on':''">抢购线索</a>
         </section><!-- 选项卡 -->
 
-        <section class="G-search-box">
-            <a href="javascript:;" class="u-lk">
-                <div class="m-srh">
-                    <i class="iconfont icon-sousuo"></i>搜索姓名或手机号
-                </div>
-            </a>
-        </section><!-- 搜索 -->
-
-        <div class="G-list-box">
-            <section class="recd-list">
-                <div class="m-item">
-                    <a href="javascript:;" class="u-lk">
-                        <h3 class="m-tit">
-                            <span class="u-flag">推荐</span>仓栅式半挂
-                        </h3>
-                        <section class="u-line f__clearfix">
-                            <div class="f__fl">
-                                <span class="u_area">河北 石家庄</span>
-                                <span class="u_name">李亮</span>
-                            </div>
-                            <div class="f__fr">五分钟前</div>
-                        </section>
-                        <section class="u-line v2 f__clearfix">
-                            <div class="f__fl">
-                                <span class="u-lab">独享</span>
-                            </div>
-                            <a href="javascript:;" class="f__fr u-btn">点击查看</a>
-                        </section>
-                    </a>
-                </div>
-                <div class="m-item">
-                    <a href="javascript:;" class="u-lk">
-                        <h3 class="m-tit">
-                            <span class="u-flag">推荐</span>仓栅式半挂
-                        </h3>
-                        <section class="u-line f__clearfix">
-                            <div class="f__fl">
-                                <span class="u_area">四川 达州</span>
-                                <span class="u_name">刘洪</span>
-                            </div>
-                            <div class="f__fr">7小时</div>
-                        </section>
-                        <section class="u-line v2 f__clearfix">
-                            <div class="f__fl">
-                                <span class="u-lab">独享</span>
-                            </div>
-                            <a href="javascript:;" class="f__fr u-btn u-not-see">点击查看</a>
-                        </section>
-                    </a>
-                </div>
-            </section><!-- 推荐线索列表 -->
-            <section class="contact-list">
-                <div class="m-item">
-                    <a href="javascript:;" class="u-lk">
-                        <h3 class="m-tit">
-                            <span class="u_name">陈永兴</span>
-                            <span class="u_area">云南 楚雄</span>
-                        </h3>
-                        <section class="u-line">
-                            <div class="c_model">栏板式半挂</div>
-                        </section>
-                        <section class="u-line">
-                            <div class="issue_time">2017/05/22</div>
-                        </section>
-                        <i class="iconfont icon-arrowright1"></i>
-                    </a>
-                </div>
-            </section><!-- 联系人列表 -->
-            <section class="no-item">
-                <p>~我是有底线滴~</p>
-            </section>
-        </div><!-- 线索列表容器 -->
+        <transition name="fade">
+            <keep-alive>
+                <router-view></router-view>
+            </keep-alive>
+        </transition>
 
         <!-- 引入底部 -->
         <c-foot :nav-item="1"></c-foot>
@@ -90,15 +23,11 @@
         name: "clue",
         data () {
             return {
-                author: {
-                    tel: 18870836264,
-                },
-                data: {
-                    logoUrl: "static/img/LOGO.png",
-                    logoTit: "商机宝LOGO",
-                },
-                value: false,
+                tapItem : 1,
             }
+        },
+        props: {
+
         },
         // 引入组件
         components:{
@@ -106,8 +35,27 @@
         },
         // 声明周期，vue实例挂载好的时候
         mounted(){
-
+            let path = this.$route.path;
+            console.log(path)
+            switch(path){
+                case '/clue/myClue': this.tapItem = 1;
+                    break;
+                case '/clue/buyClue': this.tapItem = 2;
+                    break;
+            }
         },
+        // 自定义函数/方法
+        methods: {
+            tapSwitch(num){
+                this.tapItem = num;
+                if(num==1){
+                    this.$router.push({ path: '/clue/myClue' })   
+                }else if(num==2){
+                    this.$router.push({ path: '/clue/buyClue' })
+                }
+            },
+        },
+        
     }
 </script>
 
