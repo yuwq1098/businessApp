@@ -2,22 +2,22 @@
     <footer class="G-foot-nav">
         <ul class="m-nav-list f__clearfix">
             <li class="u-nav-item box__fl" :class="[navItem==1?'on':'']">
-                <a href="javascript:;" class="u-lk">
+                <router-link :to="{ path : '/clue' }" class="u-lk">
                     <i class="u-ico iconfont icon-107"></i>
                     <p class="u-tit">线索</p>
-                </a>
+                </router-link>
             </li>
             <li class="u-nav-item box__fl" :class="[navItem==2?'on':'']">
-                <a href="javascript:;" class="u-lk">
+                <router-link :to="{ path : '/contacts' }" class="u-lk">
                     <i class="u-ico iconfont icon-lianxiren"></i>
                     <p class="u-tit">联系人</p>
-                </a>
+                </router-link>
             </li>
             <li class="u-nav-item box__fl" :class="[navItem==3?'on':'']">
-                <a href="javascript:;" class="u-lk">
+                <router-link :to="{ path : '/member' }" class="u-lk">
                     <i class="u-ico iconfont icon-wode1"></i>
                     <p class="u-tit">我的</p>
-                </a>
+                </router-link>
             </li>
         </ul>
     </footer>
@@ -40,7 +40,7 @@
         },
         // 声明周期，vue实例挂载好的时候
         mounted(){
-           console.log(this.navItem)
+            
         },
     }
 </script>

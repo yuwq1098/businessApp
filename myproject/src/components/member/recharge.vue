@@ -34,25 +34,6 @@
             </section>
         </div>
 
-        <footer class="G-foot-nav">
-            <ul class="clearfix">
-                <li class="box__fl">
-                    <i class="iconfont"></i>
-                    <span>线索</span>
-                </li>
-                <li class="box__fl">
-                    <i class="iconfont"></i>
-                    <span>联系人</span>
-                </li>
-                <li class="box__fl active">
-                    <i class="iconfont"></i>
-                    <span>我的</span>
-                </li>
-            </ul>
-
-        </footer>
-
-        
     </div>
 </template>
 
@@ -85,5 +66,5 @@
 
 <!-- “scoped” 让css只作用当前组件 -->
 <style lang="stylus" rel="stylesheet/stylus" scoped>
-  @import './member.styl'
+  @import './recharge.styl'
 </style>

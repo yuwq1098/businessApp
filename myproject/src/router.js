@@ -23,9 +23,9 @@ const contacts_list = r => require.ensure([], () => r(require('./components/cont
 const contacts_details = r => require.ensure([], () => r(require('./components/contacts/details.vue')), 'contacts_details')
 const contacts_edit = r => require.ensure([], () => r(require('./components/contacts/edit.vue')), 'contacts_edit')
 const my_clue_details = r => require.ensure([], () => r(require('./components/clue/my_clue_details.vue')), 'my_clue_details')
-
-
-
+const member = r => require.ensure([], () => r(require('./components/member/member.vue')), 'member')
+const recharge = r => require.ensure([], () => r(require('./components/member/recharge.vue')), 'recharge')
+const message = r => require.ensure([], () => r(require('./components/member/message.vue')), 'message')
 
 // 定义路由
 export default [{
@@ -79,6 +79,14 @@ export default [{
 	    {
             path: '/clueDetailsMy',
             component: my_clue_details
+	    },
+	    {
+            path: '/member',
+            component: member
+	    },
+	    {
+            path: '/recharge',
+            component: recharge
 	    },
 	    {
 	        path: '/help',

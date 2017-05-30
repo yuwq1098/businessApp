@@ -39,7 +39,7 @@
             </section>
         </div><!-- 联系人列表容器 -->
 
-        <section class="g-add-ball">
+        <section class="g-add-ball" @click.stop="addContact">
             <i class="iconfont icon-tianjia"></i>
         </section><!-- 添加线索 -->
         
@@ -71,8 +71,14 @@
         },
         // 声明周期，vue实例挂载好的时候
         mounted(){
-
+            
         },
+        // 自定义函数/方法
+        methods:{
+            addContact(){
+                this.$router.push({ path: '/contactsEdit' })
+            },
+        }
     }
 </script>
 
