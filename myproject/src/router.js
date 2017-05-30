@@ -26,6 +26,10 @@ const my_clue_details = r => require.ensure([], () => r(require('./components/cl
 const member = r => require.ensure([], () => r(require('./components/member/member.vue')), 'member')
 const recharge = r => require.ensure([], () => r(require('./components/member/recharge.vue')), 'recharge')
 const message = r => require.ensure([], () => r(require('./components/member/message.vue')), 'message')
+const recharge_record = r => require.ensure([], () => r(require('./components/member/recharge_record.vue')), 'recharge_record')
+const agreement = r => require.ensure([], () => r(require('./components/member/agreement.vue')), 'agreement')
+
+
 
 // 定义路由
 export default [{
@@ -87,6 +91,14 @@ export default [{
 	    {
             path: '/recharge',
             component: recharge
+	    },
+	    {
+            path: '/rechargeRecord',
+            component: recharge_record
+	    },
+	    {
+            path: '/agreement',
+            component: agreement
 	    },
 	    {
 	        path: '/help',

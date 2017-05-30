@@ -1,8 +1,7 @@
 <template>
     <div id="record" class="G-page">
 
-        
-        <div class="G-line-info">
+        <div class="m-line-gp">
             <section class="m-item">
                 <span class="u-txt">充值了14元</span>
                 <p class="count">+142金豆</p>
@@ -25,30 +24,11 @@
             </section>
         </div>
 
-        <section class="f__hide">
+        <section class="m-no-record">
             <img src="" alt="失败脸"/>
             <p>您还没有购买过卡豆~</p>
-        </section>
+        </section><!-- 没有记录 -->
 
-        <footer class="G-foot-nav">
-            <ul class="clearfix">
-                <li class="box__fl">
-                    <i class="iconfont"></i>
-                    <span>线索</span>
-                </li>
-                <li class="box__fl">
-                    <i class="iconfont"></i>
-                    <span>联系人</span>
-                </li>
-                <li class="box__fl active">
-                    <i class="iconfont"></i>
-                    <span>我的</span>
-                </li>
-            </ul>
-
-        </footer>
-
-        
     </div>
 </template>
 
@@ -58,14 +38,7 @@
         name: "record",
         data () {
             return {
-                author: {
-                    tel: 18870836264,
-                },
-                data: {
-                    logoUrl: "static/img/LOGO.png",
-                    logoTit: "商机宝LOGO",
-                },
-                value: false,
+
             }
         },
         // 引入组件
@@ -81,5 +54,5 @@
 
 <!-- “scoped” 让css只作用当前组件 -->
 <style lang="stylus" rel="stylesheet/stylus" scoped>
-  @import './member.styl'
+  @import './recharge_record.styl'
 </style>

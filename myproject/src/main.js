@@ -16,7 +16,7 @@ Vue.use(VueResource);
 
 const router = new VueRouter({
     routes,
-    mode: 'history',
+    mode: 'hash',
     base: __dirname, //这个很重要
 })
 
