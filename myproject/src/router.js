@@ -55,7 +55,22 @@ export default [{
 	    },
 	    {
 	        path: '/register',
-	        redirect: '/step1'
+	        component: register,
+	        redirect: '/register/step1',
+            children: [
+                {
+                    path: 'step1',
+	                component: step1,
+	            },
+	            {
+                    path: 'step2',
+	                component: step2,
+	            },
+	            {
+                    path: 'step3',
+	                component: step3,
+	            },
+            ],
 	    },
 	    {
 	        path: '/step1',

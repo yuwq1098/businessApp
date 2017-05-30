@@ -1,36 +1,86 @@
-@import '../../common/css/app'
-.G-page
-    height 100vh
-    background-color $c_white
-    _boxSizing()
-    padding 0
-    .G-page-box
-        width 100%
-        height 100%
-        _boxSizing()
-        padding 0
-        .G-logo
-            width 2rem
-            height 2.05rem
-            margin 0 auto
-            _imgwrap()
-        .G-logo-txt
-            font-size $f_medium
-            color $c_blue
-            _spacingPlus(1px)
-            text-align: center;
-            margin .6rem auto .8rem
-        .G-btn
-            _display(block)
-            width 100%
-            height 1.05rem
-            line-height 1.05rem
-            text-align center
-            font-size $f_medium
-            _borderRadius(.12rem)
-            _spacingPlus(4px)
-            &.G-btn-primary
-                color #fff
-                margin-bottom .6rem
+@import "../../common/css/mixin.styl"
 
+.G-page
+    width 100%
+    height 100%
+    position absolute
+    background-color #fff
+    .m-step-head
+        width 100%
+        height 3rem
+        _border(bottom,#e2e2e2)
+        _boxSizing()
+        padding 0 1.2rem
+        position relative
+        .u-step
+            width 32%
+            height .75rem
+            line-height .75rem
+            float left
+            color #545454
+            position relative
+            padding-top 1.05rem
+            margin-top .7rem
+            z-index 9
+            &.v2
+                width 36%
+            .u-num
+                _display()
+                width .9rem
+                height .9rem
+                line-height .9rem
+                color #959595
+                _borderRadius()
+                text-align center
+                font-size 15px
+                background #fff
+                border 1px solid #c5c5c5
+                position absolute
+                top 0
+            &.on
+                .u-num
+                    background $c_green
+                    border 1px solid $c_green
+                    color #f4f4f4
+            .u-tit
+                font-size 13px
+                _spacingPlus()
+            &.v1
+                .u-num
+                    left 0
+                .u-tit
+                    padding-left .10rem
+            &.v2
+                .u-num
+                    left 0
+                    right 0
+                    margin 0 auto
+                .u-tit
+                    text-align center
+            &.v3
+                .u-num
+                    right 0
+                .u-tit
+                    text-align right
+                    padding-right .10rem
+        .u-line
+            width 7rem
+            _completeCenter(0,0,1.15rem,auto)
+            height 1px
+            background-color #c5c5c5
+            z-index 1
+            .u-line-cd
+                width 26.5%
+                height 1px
+                background-color $c_green
+                &.v1
+                    width 26.5%
+                &.v2
+                    width 74%
+                &.v3
+                    width 100%
+            
+    .m-isolate20
+        height .20rem
+        background-color #f2f2f2
 
