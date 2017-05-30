@@ -1,171 +1,32 @@
 @import "../../common/css/mixin.styl"
 
-.G-page
-    background transparent
-    .G-tabnav-box
-        height 50px
-        box-sizing border-box
-        background #fff
-        _border(bottom,#ededed,1px)
-        .u-lk
-            line-height 49px
-            width 50%
-            float left
-            text-align center
-            font-size 15px
-            _spacingPlus(1px)
-            color $c_black
-            position relative
-            &.on
-            	color $c_green
-            	&::after
-            		content ""
-            		display block
-	            	width 100%
-	            	height 2px
-	            	background $c_green
-	            	position absolute
-	            	left 0
-	            	bottom 0
-    .G-search-box
-        width 100%
-        height 44px
-        background #f4f4f4
-        _boxSizing()
-        padding 8px
-        .u-lk
-            _display(block)
-            width 100%
-            height 28px
-            .m-srh
-                background #fff
-                width @width
-                height @height
-                line-height @height - 2px
-                _boxSizing()
-                _borderRadius(4px)
-                border 1px solid #f0f0f0
-                text-align center
-                color #959595
-                .iconfont
-                    margin-right 2px
-    
-    .G-list-box
-        .u-lk
-            color $c_black03
-        .recd-list
-            _border(top,#e2e2e2)
-            .m-item
+.m-tabnav-box
+    width 100%
+    height 50px
+    box-sizing border-box
+    background #fff
+    position fixed
+    top 0
+    left 0
+    z-index 999
+    _border(bottom,#ededed,1px)
+    .u-lk
+        line-height 49px
+        width 50%
+        float left
+        text-align center
+        font-size 15px
+        _spacingPlus(1px)
+        color $c_black
+        position relative
+        &.on
+            color $c_green
+            &::after
+                content ""
+                display block
                 width 100%
-                background #fff
-                _border(bottom,#ededed)
-                .u-lk
-                    width @width
-                    height @height
-                    _boxSizing()
-                    padding .15rem .25rem
-                    _display()
-                    color $c_black03
-                    .m-tit
-                        height 30px
-                        line-height 30px
-                        font-weight normal
-                        font-size 16px
-                        .u-flag
-                            font-size 12px
-                            padding 2px 4px
-                            _spacingPlus(1px)
-                            _borderRadius(3px)
-                            margin-right 3px
-                            color $c_blue
-                            border 1px solid $c_blue
-                    .u-line
-                        margin-top 2px
-                        height 22px
-                        line-height 22px
-                        font-size 13px
-                        color #777
-                        .u_area
-                            margin-right 6px
-                        &.v2
-                            height 30px
-                            line-height 30px
-                            .u-lab
-                                font-size 12px
-                                padding 2px 4px
-                                _spacingPlus(1px)
-                                _borderRadius(3px)
-                                margin-right 3px
-                                border 1px solid #c5c5c5
-                            .u-btn
-                                padding 0 6px
-                                height 26px
-                                line-height 26px
-                                margin-top 1px
-                                _spacingPlus(1px)
-                                _borderRadius(3px)
-                                color #545454
-                                _display(inline-block)
-                                border 1px solid #c5c5c5
-                                &.u-not-see
-                                    position relative
-                                    &::before
-                                       content ""
-                                       _display()
-                                       position absolute
-                                       right -3px
-                                       top -3px
-                                       width 7px
-                                       height 7px
-                                       _borderRadius()
-                                       background $c_red 
-                            
-        .contact-list
-            _border(bottom,#e2e2e2)
-            .m-item
-                width 100%
-                background #fff
-                &:not(:last-child)
-                    _border(bottom,#ededed)
-                .u-lk
-                    width @width
-                    _boxSizing()
-                    padding .15rem .25rem
-                    _display()
-                    color $c_black03
-                    position relative
-                    .m-tit
-                        height 28px
-                        line-height 28px
-                        font-weight normal
-                        font-size 16px
-                        margin-bottom 4px
-                        .u_area
-                            font-size 13px
-                            margin-left 6px
-                    .u-line
-                        height 20px
-                        line-height 20px
-                        margin-top 4px
-                        font-size 13px
-                    .iconfont
-                        width 24px
-                        height 24px
-                        line-height 24px
-                        text-align center
-                        position absolute
-                        right .25rem
-                        top 0
-                        bottom 0
-                        margin auto 0
-                    
-                    
-                        
-        .no-item
-            line-height 54px
-            height 54px
-            text-align center
-            color #777
-            font-size 14px
-            _spacingPlus(1px)
-            
+                height 2px
+                background $c_green
+                position absolute
+                left 0
+                bottom 0

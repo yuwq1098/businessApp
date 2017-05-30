@@ -1,126 +1,143 @@
 <template>
-    <div id="clue" class="G-page" :tapItem="2">
+    <div id="clue" class="G-page m-fixed-top m-fixed-bottom" :tapItem="2">
 
-        <section class="G-search-box clearfix">
-            <div class="box__fl">
+        <section class="m-filter-box clearfix">
+            <div class="u-item">
                 <span>地区</span>
-                <i class="iconfont"></i>
+                <i class="iconfont icon-xiasanjiao"></i>
             </div>
-            <div class="box__fr">
+            <div class="u-item">
                 <span>类别</span>
-                <i class="iconfont"></i>
+                <i class="iconfont icon-xiasanjiao"></i>
             </div>
         </section><!-- 条件筛选 -->
 
-        <div class="G-list-box">
+        <div class="m-list-box">
             <section class="recd-list">
-                <div class="recd-item">
-                    <a href="javascript:;">
-                        <h3 class="">
-                            <span>推荐</span>仓栅式半挂
+                <div class="m-item">
+                    <router-link :to="{path:'/clueDetailsBuy'}" class="u-lk">
+                        <h3 class="m-tit">
+                            <span class="u-flag">推荐</span>仓栅式半挂
                         </h3>
-                        <p>
-                            <div class="box__fl">
-                                <span class="u_district">河北·石家庄</span>
+                        <section class="u-line f__clearfix">
+                            <div class="f__fl">
+                                <span class="u_area">河北 石家庄</span>
                                 <span class="u_name">李亮</span>
                             </div>
-                            <div class="box__fr">7小时</div>
-                        </p>
-                        <p>
-                            <div class="box__fl">
-                                <span>独享</span>
+                            <div class="f__fr">五分钟前</div>
+                        </section>
+                        <section class="u-line v2 f__clearfix">
+                            <div class="f__fl">
+                                <span class="u-lab">独享</span>
                             </div>
-                            <a href="javascript:;" class="box__fr">点击查看</a>
-                        </p>
-                    </a>
+                            <a href="javascript:;" class="f__fr u-btn u-not-see">点击查看</a>
+                        </section>
+                    </router-link>
                 </div>
-                <div class="recd-item">
-                    <a href="javascript:;">
-                        <h3 class="">
-                            <span>推荐</span>仓栅式半挂
+                <div class="m-item">
+                    <router-link :to="{path:'/clueDetailsBuy'}" class="u-lk">
+                        <h3 class="m-tit">
+                            <span class="u-flag">推荐</span>仓栅式半挂
                         </h3>
-                        <p>
-                            <div class="box__fl">
-                                <span class="u_district">河北·石家庄</span>
-                                <span class="u_name">李亮</span>
+                        <section class="u-line f__clearfix">
+                            <div class="f__fl">
+                                <span class="u_area">四川 达州</span>
+                                <span class="u_name">刘洪</span>
                             </div>
-                            <div class="box__fr">7小时</div>
-                        </p>
-                        <p>
-                            <div class="box__fl">
-                                <span>独享</span>
+                            <div class="f__fr">7小时</div>
+                        </section>
+                        <section class="u-line v2 f__clearfix">
+                            <div class="f__fl">
+                                <span class="u-lab">独享</span>
                             </div>
-                            <a href="javascript:;" class="box__fr">点击查看</a>
-                        </p>
-                    </a>
+                            <a href="javascript:;" class="f__fr u-btn u-not-see">点击查看</a>
+                        </section>
+                    </router-link>
                 </div>
-                <div class="recd-item">
-                    <a href="javascript:;">
-                        <h3 class="">
-                            <span>推荐</span>仓栅式半挂
+                <div class="m-item">
+                    <router-link :to="{path:'/clueDetailsBuy'}" class="u-lk">
+                        <h3 class="m-tit">
+                            <span class="u-flag">推荐</span>仓栅式半挂
                         </h3>
-                        <p>
-                            <div class="box__fl">
-                                <span class="u_district">河北·石家庄</span>
-                                <span class="u_name">李亮</span>
+                        <section class="u-line f__clearfix">
+                            <div class="f__fl">
+                                <span class="u_area">四川 达州</span>
+                                <span class="u_name">刘洪</span>
                             </div>
-                            <div class="box__fr">7小时</div>
-                        </p>
-                        <p>
-                            <div class="box__fl">
-                                <span>独享</span>
+                            <div class="f__fr">7小时</div>
+                        </section>
+                        <section class="u-line v2 f__clearfix">
+                            <div class="f__fl">
+                                <span class="u-lab">独享</span>
                             </div>
-                            <a href="javascript:;" class="box__fr">点击查看</a>
-                        </p>
-                    </a>
+                            <a href="javascript:;" class="f__fr u-btn u-not-see">点击查看</a>
+                        </section>
+                    </router-link>
                 </div>
-                <div class="recd-item">
-                    <a href="javascript:;">
-                        <h3 class="">
-                            <span>推荐</span>仓栅式半挂
+                <div class="m-item">
+                    <router-link :to="{path:'/clueDetailsBuy'}" class="u-lk">
+                        <h3 class="m-tit">
+                            <span class="u-flag">推荐</span>仓栅式半挂
                         </h3>
-                        <p>
-                            <div class="box__fl">
-                                <span class="u_district">河北·石家庄</span>
-                                <span class="u_name">李亮</span>
+                        <section class="u-line f__clearfix">
+                            <div class="f__fl">
+                                <span class="u_area">四川 达州</span>
+                                <span class="u_name">刘洪</span>
                             </div>
-                            <div class="box__fr">7小时</div>
-                        </p>
-                        <p>
-                            <div class="box__fl">
-                                <span>独享</span>
+                            <div class="f__fr">7小时</div>
+                        </section>
+                        <section class="u-line v2 f__clearfix">
+                            <div class="f__fl">
+                                <span class="u-lab">独享</span>
                             </div>
-                            <a href="javascript:;" class="box__fr">点击查看</a>
-                        </p>
-                    </a>
+                            <a href="javascript:;" class="f__fr u-btn u-not-see">点击查看</a>
+                        </section>
+                    </router-link>
                 </div>
-                <div class="recd-item">
-                    <a href="javascript:;">
-                        <h3 class="">
-                            <span>推荐</span>仓栅式半挂
+                <div class="m-item">
+                    <router-link :to="{path:'/clueDetailsBuy'}" class="u-lk">
+                        <h3 class="m-tit">
+                            <span class="u-flag">推荐</span>仓栅式半挂
                         </h3>
-                        <p>
-                            <div class="box__fl">
-                                <span class="u_district">河北·石家庄</span>
-                                <span class="u_name">李亮</span>
+                        <section class="u-line f__clearfix">
+                            <div class="f__fl">
+                                <span class="u_area">四川 达州</span>
+                                <span class="u_name">刘洪</span>
                             </div>
-                            <div class="box__fr">7小时</div>
-                        </p>
-                        <p>
-                            <div class="box__fl">
-                                <span>独享</span>
+                            <div class="f__fr">7小时</div>
+                        </section>
+                        <section class="u-line v2 f__clearfix">
+                            <div class="f__fl">
+                                <span class="u-lab">独享</span>
                             </div>
-                            <a href="javascript:;" class="box__fr">点击查看</a>
-                        </p>
-                    </a>
+                            <a href="javascript:;" class="f__fr u-btn u-not-see">点击查看</a>
+                        </section>
+                    </router-link>
+                </div>
+                <div class="m-item">
+                    <router-link :to="{path:'/clueDetailsBuy'}" class="u-lk">
+                        <h3 class="m-tit">
+                            <span class="u-flag">推荐</span>仓栅式半挂
+                        </h3>
+                        <section class="u-line f__clearfix">
+                            <div class="f__fl">
+                                <span class="u_area">四川 达州</span>
+                                <span class="u_name">刘洪</span>
+                            </div>
+                            <div class="f__fr">7小时</div>
+                        </section>
+                        <section class="u-line v2 f__clearfix">
+                            <div class="f__fl">
+                                <span class="u-lab">独享</span>
+                            </div>
+                            <a href="javascript:;" class="f__fr u-btn u-not-see">点击查看</a>
+                        </section>
+                    </router-link>
                 </div>
             </section><!-- 推荐线索列表 -->
-            <section class="no-item">
-                <p>~我是有底线的~</p>
-            </section>
-        </div><!-- 线索列表容器 -->
+        </div>
 
-        <a class="G-float-ball" href="javascript:;">已售</a><!-- 查看已售线索 -->
+        <router-link :to="{path:'/sold'}" class="m-float-ball">已售</router-link><!-- 查看已售线索 -->
         
     </div>
 </template>

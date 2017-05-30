@@ -1,6 +1,6 @@
 <template>
-    <div id="clue" class="G-page">
-        <section class="G-tabnav-box f__clearfix">
+    <div id="clue">
+        <section class="m-tabnav-box f__clearfix">
             <a href="javascript:;"  @click.stop="tapSwitch(1)" ref="itema" class="u-lk" :class="tapItem==1?'on':''">我的线索</a>
             <a href="javascript:;" @click.stop="tapSwitch(2)" ref="itemb" class="u-lk" :class="tapItem==2?'on':''">抢购线索</a>
         </section><!-- 选项卡 -->

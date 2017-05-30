@@ -26,6 +26,7 @@ const contacts_details = r => require.ensure([], () => r(require('./components/c
 const contacts_edit = r => require.ensure([], () => r(require('./components/contacts/edit.vue')), 'contacts_edit')
 const my_clue_details = r => require.ensure([], () => r(require('./components/clue/my_clue_details.vue')), 'my_clue_details')
 const buy_clue_details = r => require.ensure([], () => r(require('./components/clue/buy_clue_details.vue')), 'buy_clue_details')
+const sold_clue = r => require.ensure([], () => r(require('./components/clue/sold_clue.vue')), 'sold_clue')
 const member = r => require.ensure([], () => r(require('./components/member/member.vue')), 'member')
 const recharge = r => require.ensure([], () => r(require('./components/member/recharge.vue')), 'recharge')
 const message = r => require.ensure([], () => r(require('./components/member/message.vue')), 'message')
@@ -102,6 +103,10 @@ export default [{
 	    {
             path: '/clueDetailsBuy',
             component: buy_clue_details
+	    },
+	    {
+            path: '/sold',
+            component: sold_clue
 	    },
 	    {
             path: '/member',

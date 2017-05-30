@@ -1,5 +1,118 @@
 @import "../../common/css/mixin.styl"
 
 .G-page
-    .G-tabnav-box
-        height 50px
+	background transparent
+	&.m-fixed-top
+		padding-top 86px
+	.m-filter-box
+		width 100%
+		height 36px
+		line-height 36px
+		position fixed
+		_boxSizing()
+		_border(bottom,#ededed)
+		background #fff
+		color #545454
+		top 50px
+		left 0
+		.u-item
+			width 50%
+			text-align center
+			float left
+			font-size 13px
+			_spacing(-4px)
+			span
+				_spacingPlus(2px)
+			.iconfont
+				font-size 16px
+				color #959595
+	.m-list-box
+		.u-lk
+			color $c_black03
+		.recd-list
+			_border(top,#e2e2e2)
+			_border(bottom,#e2e2e2)
+			.m-item
+				width 100%
+				background #fff
+				&:not(:last-child)
+					_border(bottom,#ededed)
+				.u-lk
+					width @width
+					height @height
+					_boxSizing()
+					padding .15rem .25rem
+					_display()
+					color $c_black03
+					.m-tit
+						height 30px
+						line-height 30px
+						font-weight normal
+						font-size 16px
+						.u-flag
+							font-size 12px
+							padding 2px 4px
+							_spacingPlus(1px)
+							_borderRadius(3px)
+							margin-right 3px
+							color $c_blue
+							border 1px solid $c_blue
+					.u-line
+						margin-top 2px
+						height 22px
+						line-height 22px
+						font-size 13px
+						color #777
+						.u_area
+							margin-right 6px
+						&.v2
+							height 30px
+							line-height 30px
+							.u-lab
+								font-size 12px
+								padding 2px 4px
+								_spacingPlus(1px)
+								_borderRadius(3px)
+								margin-right 3px
+								border 1px solid #c5c5c5
+							.u-btn
+								padding 0 6px
+								height 26px
+								line-height 26px
+								margin-top 1px
+								_spacingPlus(1px)
+								_borderRadius(3px)
+								color #545454
+								_display(inline-block)
+								border 1px solid #c5c5c5
+								&.u-not-see
+									position relative
+									&::before
+										content ""
+										_display()
+										position absolute
+										right -3px
+										top -3px
+										width 7px
+										height 7px
+										_borderRadius()
+										background $c_red 
+    
+	.m-float-ball
+		width 46px
+		text-align center
+		height 46px
+		line-height 40px
+		_boxSizing()
+		color #f4f4f4
+		background rgba(255,144,27,.72)
+		border 3px solid rgba(255,142,66,.18)
+		_display()
+		position fixed
+		bottom 84px
+		right .3rem
+		font-size 12px
+		_spacingPlus(1px)
+		_borderRadius()
+		
+			

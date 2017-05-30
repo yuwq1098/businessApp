@@ -1,0 +1,55 @@
+@import "../../common/css/mixin.styl"
+
+.G-page
+	background transparent
+	.m-hd-tit
+		height 36px
+		line-height 36px
+		font-size 15px
+		_spacingPlus()
+		text-align center
+		.u-tit
+			font-size 15px
+			font-weight normal
+	.m-list-box
+		.u-lk
+			color $c_black03
+		.sold-list
+			_border(top,#e2e2e2)
+			_border(bottom,#e2e2e2)
+			.m-item
+				width 100%
+				background #fff
+				&:not(:last-child)
+					_border(bottom,#ededed)
+				.u-lk
+					width @width
+					height @height
+					_boxSizing()
+					padding .15rem .25rem
+					_display()
+					color $c_black03
+					.m-tit
+						height 30px
+						line-height 30px
+						font-weight normal
+						font-size 16px
+						.u-flag
+							font-size 12px
+							padding 2px 4px
+							_spacingPlus(1px)
+							_borderRadius(3px)
+							margin-right 3px
+							color $c_blue
+							border 1px solid $c_blue
+					.u-line
+						margin-top 2px
+						height 22px
+						line-height 22px
+						font-size 13px
+						color #777
+						.u_area
+							margin-right 6px
+						&.v2
+							.u-time
+								margin-right 5px
