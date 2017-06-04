@@ -1,0 +1,71 @@
+@import "../../common/css/mixin.styl"
+
+.g-mn
+	padding 0 .25rem
+	.m-step-box
+		width 100%
+		padding .25rem 0 .15rem
+		.m-input-box
+			min-height 1rem
+			line-height 1rem
+			color $c_black
+			font-size $f_iptxt
+			_boxSizing()
+			position relative
+			padding-left 2.1rem
+			_border(bottom)
+			*
+				_spacingPlus(1px)
+				vertical-align middle
+			.m-row-tit
+				width 1.7rem
+				position absolute
+				left 0
+				top 0
+				text-align right
+			.m-row-con
+				width 100%
+				position relative
+				.m-input-rimless
+					width 100%
+					height .8rem
+					border: none
+					font-size $f_iptxt
+					vertical-align baseline
+				&.code
+					_boxSizing()
+					padding-right 2.5rem
+					.right
+						border none
+						height .7rem
+						min-height 20px
+						padding 0 .15rem
+						_completeCenter(auto,,,.1rem)
+						_borderRadius(.1rem)
+						font-size 13px
+						&.m-btn-gray
+							background #e2e2e2
+							color #545454
+			&:not(:last-child)
+				margin-bottom .15rem
+		.bind-user
+			_display()
+			height 1.05rem
+			line-height 1.05rem
+			text-align center
+			_borderRadius(4px)
+			margin .5rem 0 0
+			_spacingPlus(3px)
+			font-size 16px
+			&.m-btn-gray
+				background #e2e2e2
+				color #545454
+			&.m-btn-fill
+				background $c_green
+				color #f4f4f4
+		#gotoLogin
+			line-height 1rem
+			color $c_blue02
+			font-size $f_normal
+			&.actived,&:active
+				color $c_blue

@@ -84,5 +84,5 @@
 
 <!-- “scoped” 让css只作用当前组件 -->
 <style lang="stylus" rel="stylesheet/stylus" scoped>
-  @import './search.styl'
+  @import './search-all.styl'
 </style>

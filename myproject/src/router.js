@@ -61,28 +61,25 @@ export default [{
                 {
                     path: 'step1',
 	                component: step1,
+	                meta: {
+	                	step: 1,
+	                }
 	            },
 	            {
                     path: 'step2',
 	                component: step2,
+	                meta: {
+	                	step: 2,
+	                }
 	            },
 	            {
                     path: 'step3',
 	                component: step3,
+	                meta: {
+	                	step: 3,
+	                }
 	            },
             ],
-	    },
-	    {
-	        path: '/step1',
-	        component: step1
-	    },
-	    {
-	        path: '/step2',
-	        component: step2
-	    },
-	    {
-	        path: '/step3',
-	        component: step3
 	    },
 	    {
 	        path: '/clue',
