@@ -19,15 +19,16 @@ module.exports = {
       : config.dev.assetsPublicPath
   },
   resolve: {
-    extensions: ['.css', '.js', '.vue' ,'.styl'],
+    extensions: ['.css', '.js', '.vue' ,'.styl', '.json'],
     alias: {
       'vue$': 'vue/dist/vue',
       '@': resolve('src'),
-      'src': path.resolve(__dirname, '../src'),
-      'static': path.resolve(__dirname, '../static'),
-      'common': path.resolve(__dirname, '../src/common'),
-      'fonts': path.resolve(__dirname, '../src/common/fonts'),
-      'components': path.resolve(__dirname, '../src/components')
+      'static': resolve('static'),
+      'common': resolve('src/common'),
+      'components': resolve('src/components'),
+      'base': resolve('src/base'),
+      'store': resolve('src/store'),
+      'api': resolve('src/api')
     }
   },
   module: {
