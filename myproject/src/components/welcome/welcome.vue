@@ -17,7 +17,8 @@
 </template>
 
 <script type="text/javascript">
-    import stepFoot from '../public/foot/stepFoot.vue';
+    import stepFoot from 'components/public/foot/stepFoot.vue';
+    import {getClueLists} from 'api/getData.js';
 
     export default {
         name: "welcome",
@@ -39,7 +40,25 @@
         },
         // 声明周期，vue实例挂载好的时候
         mounted(){
-
+            getClueLists().then((res) => {
+                    console.log("大厅车辆列表",res.data);
+                })
+            // this.$ajax({
+            //       method: 'get',
+            //       url: '/api/clue/clueLists',
+            // })
+            // this.$ajax({
+            //     method: 'get',
+            //     url: '/api/clue/clueLists',
+            //     data: {
+            //         name: 'wise',
+            //         info: 'wrong'
+            //     }
+            // })
+            // const cdata = {};
+            // getClueLists(cdata).then((res) => {
+            //     console.log(res)
+            // });
         },
     }
 </script>
